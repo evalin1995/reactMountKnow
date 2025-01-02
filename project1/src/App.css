@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=LXGW+WenKai+TC&family=Sora:wght@100..800&display=swap');
+
+/* vite預設 */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.read-the-docs {
+  color: #888;
+}
+
+/* 清除預設 */
+#root {
+width: 100%;
+padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+/* 變數區:顏色’字級設定 */
+:root{
+  --shadowColour: rgba(0, 0, 0, .6);
+--primary1: #E5A84D;
+--skin:#FFD39A;
+--neutral1:#2BC07C;
+--neutral2:#FFF9A3;
+}
+body{
+  font-family:"Sora", "Chocolate Classical Sans" ;
+  
+}
+/* 測驗頁 */
+#quiz{
+  width: 67%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;  /* 防止內容被切到 */
+}
+.quiz-box{
+  background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+  background-size: cover;
+  margin-top: 6%;
+  transition: .5s ease-in;
+  z-index: 99;
+}
+.quiz-box:nth-child(even){
+  background-position: 50% 20%;
+  transform: rotate(8deg);
+}
+.quiz-box:nth-child(odd){
+  transform: rotate(-12deg);
+
+}
+.quiz-box:hover{
+  transform: none;
+  box-shadow: 0 0 8px var(--shadowColour);
+
+}
+
+div.question{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding: 30px 48px;
+}
+.bg-quiz{
+ width: 200px;
+}
+.wrapper{
+  position: relative;
+flex-direction: column;
+padding: 0 2%;
+}
+.svg-background {
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.question>ul{
+  width: 100%;
+  flex-wrap: wrap;
+}
+.question>ul>li{
+   white-space:nowrap;
+margin: 0 10px;
+}
+/* 選擇置中 */
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alignC{
+  display: flex;
+  align-items: center;
+}
+#banner{
+  background-size: cover;
+  background-image: url(../public/02-web-images0102/explore-image/quiz-banner.jpg);
+height: 43vh;
+background-position: 50% 38%;
+  width: 100%;
+  z-index: 99;
+
+}
+.heading{
+background-image: linear-gradient(transparent 30%,
+var(--neutral2) 30%,
+var(--neutral2) 80%,
+transparent 80%
+);
+}
+.heading>span{
+  color: var(--neutral1);
+}
