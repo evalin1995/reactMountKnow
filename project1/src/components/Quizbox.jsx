@@ -1,4 +1,4 @@
-export default function Quiz() {
+export default function Quizbox() {
 
 const questions = [
   {
@@ -62,7 +62,8 @@ const questions = [
   }
   return (
     <>
-     <ul id='quiz'>
+     <ul id='quiz' className="alignC">
+      <p>即便是沒有高低起伏的近郊步道，風險也無所不在。利用10題測驗，了解學習登山知識的方向。（花費時間：10分鐘）</p>
         {chunks.map((chunk, index) => (
           <li key={index} className="quiz-box">
             {chunk.map((question, questionIndex) => (

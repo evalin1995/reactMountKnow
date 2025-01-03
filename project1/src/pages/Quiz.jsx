@@ -1,9 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
-import Quiz from './components/Quizbox';
+import Quiz from '../components/Quizbox';
 import './App.css'
 import { useEffect, useState } from 'react';
-import Quizbox from './components/Quizbox';
-import Navbar from './components/Navbar';
 
 function App() {
   const [backgroundStyles, setBackgroundStyles] = useState([]);
@@ -45,13 +42,6 @@ function App() {
       <header id="topbar"className='alignC'>
         <a href="" className="logo"><img src="public\02-web-images0102\contour2.svg" alt="" /><h4 className='alignC'>山知</h4></a>
         <nav className="navigation">
-          {/* <Navbar/>
-          <Routes>
-          <Route element={<Quiz/>} path='/'></Route>
-        <Route element={<About />} path='/about'></Route>
-        <Route element={<News />} path='/news'></Route>
-
-          </Routes> */}
           <ul>
             {navItems.map((item, index) => (
               <li key={index}>
@@ -75,7 +65,7 @@ function App() {
         </div>
         <div className='wrapper alignC'>
           {/* 試卷區 */}
-          <Quizbox />
+          <Quiz />
           {
             backgroundStyles.map((style, index) => (
               <div key={index} className="svg-background" style={{
