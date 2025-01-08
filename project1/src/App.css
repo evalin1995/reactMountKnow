@@ -4,7 +4,7 @@
 #root {
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 
@@ -52,7 +52,9 @@ a{
 :root{
   --shadowColour: rgba(0, 0, 0, .6);
 --primary1: #E5A84D;
---primary2: #606C97;
+--primary2: #2A3663;
+
+--primary2-w: #606C97;
 --primary1-w: #FFF4E6;
 
 --skin:#FFD39A;
@@ -82,6 +84,46 @@ h1{
   display: flex;
 justify-content: center;
 }
+
+#topbar{
+  justify-content: space-between;
+  background-color: var(--primary2-w);
+  opacity: .9;
+  padding: 0 16px;
+}
+.logo>h4{
+  flex-direction: column;
+  font-weight: 600;
+  color: var(--primary1);
+}
+.logo{
+  display: flex;
+  width: 60px;  font-family: "LXGW WenKai TC", serif;
+
+}
+img,svg{
+  width: 100%;
+}
+/* 導覽列內容 */
+  .navigation{
+  display: flex;
+  justify-content: space-around;
+}
+/* 選單 */
+.navigation>ul{
+  display: flex;
+  width: 100%;
+}
+.navigation>ul>li{
+  display: flex;
+  transition: .4s;
+}
+
+.navigation>ul>li>*{
+  color: #fff;
+  padding: 5px;
+}
+
 /* 測驗頁 */
 #quiz{
   width: 67%;
@@ -89,7 +131,6 @@ justify-content: center;
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;  /* 防止內容被切到 */
-  padding: 5% 0 ;
 }
 #quiz>p{
   padding-top: 5%;
@@ -105,28 +146,19 @@ justify-content: center;
 }
 .quiz-box:nth-child(even){
   background-position: 50% 20%;
-  transform: rotate(8deg);
 }
-.quiz-box:nth-child(odd){
-  transform: rotate(-12deg);
 
-}
-.quiz-box:hover{
-  transform: none;
-  box-shadow: 0 0 8px var(--shadowColour);
-
-}
 
 div.question{
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  padding: 30px 48px;
 }
 .bg-quiz{
  width: 200px;
 }
 .wrapper{
+  position: relative;
 flex-direction: column;
 padding: 0 2%;
 background-color:var(--primary1-w) ;
@@ -143,6 +175,18 @@ width:  30%;
   height: 100%;
   object-fit: cover;
 }
+.quiz-bg{
+  position: absolute;  /* 利用wrapper的外層定位 */
+  width:  30%;
+  fill: var(--primary1);}
+.quiz-bg:nth-child(odd){
+  top: 3%;
+  left: 9%;
+}
+.quiz-bg:nth-child(even){
+  top: 6%;
+  right: 3%;
+}
 .question>ul{
   width: 100%;
   flex-wrap: wrap;
@@ -151,7 +195,8 @@ width:  30%;
    white-space:nowrap;
 margin: 0 10px;
 }
-.question>ul>li:active{
+  .question ul li input:checked + label {
+
   text-decoration: line-through;
   text-decoration-color: var(--red);
 }
@@ -176,59 +221,62 @@ transparent 80%
 .heading>span{
   color: var(--neutral1);
 }
-#topbar{
-  justify-content: space-between;
+button{
+  border: 0;
+}
+#quiz button{
   background-color: var(--primary2);
-  opacity: .9;
-  padding: 0 16px;
-}
-.logo>h4{
-  flex-direction: column;
-  font-weight: 600;
-  color: var(--primary1);
-}
-.logo{
-  display: flex;
-  width: 60px;  font-family: "LXGW WenKai TC", serif;
-
-}
-img,svg{
-  width: 100%;
-}
-/* 導覽列內容 */
-  .navigation{
-  display: flex;
-  width: 63%;
-  justify-content: space-around;
-padding: 20px;
-}
-/* 選單 */
-.navigation>ul{
-  display: flex;
-  width: 100%;
-}
-.navigation>ul>li{
-  display: flex;
-  margin: 0 8px;
-  transition: .4s;
-}
-.navigation>ul>li:hover p{
-  transform: rotate(16deg);
-  background-color: var(--neutral1);
-}
-.navigation>ul>li>*{
   color: #fff;
-  padding: 5px;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
-.navigation>ul>li>a{
-  padding-right: 20px;
+#quiz button:nth-child(even){
+  background: orange;
+}
+.grid-l{
+  height: 100%;
+  flex: 2;
+}
+.grid-r {
+  flex: 3;
+ 
+  height: 100%;
+}
+.grid-r,#col2 {
+
+  display: flex;
+
+}
+.grid-r,.col{
+  flex-direction: column;
+}
+.grid-r div{
+  display: flex;
+  background:  orchid;
+}
+#row1,#col2{
+  flex:3;
 }
 
-.navigation>ul>li>a>span{
-  padding-left: 10px;
+#row2,#col1{
+  flex: 2;
 }
-.navigation>ul>li>p{
-background-color: #ccc;
-height: 1.5rem;
-width: 0.05em;
+#col2 >div{
+border: 2px solid yellow;
+flex: 1;
+}
+.col{
+  border: 2px solid green;
+}
+#col1{
+  justify-content: space-around;
+}
+.content {
+display: flex;
+flex-direction: column;
+flex:3
+}
+.content >*{
+  background: #fff;
 }

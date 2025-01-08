@@ -1,4 +1,4 @@
-export default function Quizbox() {
+import { useState } from "react";
 
 const questions = [
   {
@@ -52,14 +52,33 @@ const questions = [
     answer: 1
   }
 ];
+ // Split the questions into 3 parts
+ const chunkSize = 4;
+ const chunks = [];
+ for (let i = 0; i < questions.length; i += chunkSize) {
+   chunks.push(questions.slice(i, i + chunkSize));
+ }
+export default function Quizbox() {
 
+ 
+  const [answers, setAnswers] = useState(Array(questions.length).fill(null));
+  const [score, setScore] = useState(null);
 
-  // Split the questions into 3 parts
-  const chunkSize = 4;
-  const chunks = [];
-  for (let i = 0; i < questions.length; i += chunkSize) {
-    chunks.push(questions.slice(i, i + chunkSize));
-  }
+  const handleChange = (questionIndex, selectedAnswer) => {
+    const updatedAnswers = [...answers];
+    updatedAnswers[questionIndex] = selectedAnswer;
+    setAnswers(updatedAnswers);
+  };
+  const handleSubmit = () => {
+    answers.includes(null)
+      ? alert("請完成所有問題")
+      : setScore(answers.filter((answer, index) => answer === questions[index].answer).length);
+  };
+
+  const handleClear = () => {
+    setAnswers(Array(questions.length).fill(null)); // 將所有答案重設為 null
+    setScore(null); // 也清除分數
+  };
   return (
     <>
      <ul id='quiz' className="alignC">
@@ -74,17 +93,34 @@ const questions = [
                   
                 }}>
                   {question.options.map((option, i) => (
-                    <li key={i} style={{
-                      display:'flex'
-                    }}>{i + 1}. {option}</li>
+                    <li key={i}>
+                  <input
+                        type="radio"
+                        id={`question${index * chunkSize + questionIndex}-option${i}`}
+                        name={`question${index * chunkSize + questionIndex}`} // Use a unique name for each question
+                        value={i}
+                        checked={answers[index * chunkSize + questionIndex] === i}
+                        onChange={() => handleChange(index * chunkSize + questionIndex, i)}
+                      />
+                      <label htmlFor={`question${index * chunkSize + questionIndex}-option${i}`}>
+                        {option}
+                      </label>
+                    </li>
                   ))}
                 </ul>
               </div>
             ))}
           </li>
         ))}
+      
+      {score !== null && (
+        <div className="score">
+          <p>你的分數是：{score} / {questions.length}</p>
+        </div>
+      )}
+<button  onClick={handleSubmit}>看結果</button>
+      <button  onClick={handleClear}>再試一次</button>
       </ul>
-
 
     </>
   )

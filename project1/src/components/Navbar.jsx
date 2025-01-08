@@ -3,24 +3,33 @@ import { Link } from "react-router-dom"
 
 export default function Navbar() {
     
+  const navItems = [
+    { engTitle: 'Explore', title: '探索', url: '/explore' },
+    { engTitle: 'Wear', title: '裝備', url: '/wear' },
+    { engTitle: 'Train', title: '訓練', url: '/about' },
+    { engTitle: 'News', title: '最新', url: '/news' },
+    { engTitle: 'Quiz', title: '測驗', url: '/quiz' },
+  ];
+  
+
     return (
         <>
             <ul className="menu">
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link to='/quiz'>
+                <Link to={item.url || '#'}>
                   {item.engTitle}
                   <span>{item.title}</span>
                 </Link>
-                <p></p>
               </li>
             ))}
-              <li>
+              
+              {/* <li>
                 <Link to='/about'>關於我們</Link>
               </li>
               <li>
                 <Link to='/news'>最新消息</Link>
-              </li>
+              </li> */}
               </ul>
             {/* <ul>
                 <li><Link to="/">HOME</Link></li>
