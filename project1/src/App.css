@@ -132,10 +132,9 @@ img{
 /* 首頁 */
 #index-banner{
   /* width: calc(90vh *1.62); */
-  width: calc( 100% - 30px * 2);
-  max-height: 90vh;
-  height: calc( (100vw - 30px * 2) / 1.62);
-  
+  /* max-height: 90vh; */
+  /* height: calc( (100vw - 30px * 2) / 1.62); */
+  height: 90vh;
 }
 #grid-l{
   height: 100%;
