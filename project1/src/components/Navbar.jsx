@@ -14,6 +14,9 @@ export default function Navbar() {
 
     return (
         <>
+         <header id="topbar" className='alignC'>
+        <a href="" className="logo"><img src="public/02-web-images0102/contour2.svg" alt="" /><h4 className='alignC'>山知</h4></a>
+        <nav className="navigation">
             <ul className="menu">
             {navItems.map((item, index) => (
               <li key={index}>
@@ -30,7 +33,9 @@ export default function Navbar() {
               <li>
                 <Link to='/news'>最新消息</Link>
               </li> */}
-              </ul>
+              </ul></nav>
+      </header>
+
             {/* <ul>
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>

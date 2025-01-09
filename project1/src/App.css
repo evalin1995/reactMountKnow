@@ -58,6 +58,8 @@ a{
 --primary1-w: #FFF4E6;
 
 --skin:#FFD39A;
+--moss:#E3EECD;
+
 --neutral1:#2BC07C;
 --neutral2:#FFF9A3;
 --red:#C62E2E;
@@ -96,12 +98,15 @@ justify-content: center;
   font-weight: 600;
   color: var(--primary1);
 }
+#topbar>svg{
+  width: 100%;
+}
 .logo{
   display: flex;
   width: 60px;  font-family: "LXGW WenKai TC", serif;
 
 }
-img,svg{
+img{
   width: 100%;
 }
 /* 導覽列內容 */
@@ -122,6 +127,160 @@ img,svg{
 .navigation>ul>li>*{
   color: #fff;
   padding: 5px;
+}
+
+/* 首頁 */
+#index-banner{
+  /* width: calc(90vh *1.62); */
+  width: calc( 100% - 30px * 2);
+  max-height: 90vh;
+  height: calc( (100vw - 30px * 2) / 1.62);
+  
+}
+#grid-l{
+  height: 100%;
+  flex: 2;
+}
+.grid-r {
+  flex: 3;
+ 
+  height: 100%;
+}
+.grid-r,#col2 {
+
+  display: flex;
+
+}
+.grid-r,.col{
+  flex-direction: column;
+}
+.grid-r div{
+  display: flex;
+}
+#row1{
+  flex:3;
+/* height:calc( 90vh * 0.6 ); */
+}
+#col2{
+  flex:3;
+
+  /* width: calc( 90vh * 0.6 / 1.62); */
+}
+#row2,#col1{
+  flex: 2;
+}
+#col2 >div:nth-child(odd){
+  flex: 3;
+}
+#col2 >div:nth-child(even){
+flex: 2;
+}
+
+#col1{
+  justify-content: space-around;
+}
+.content {
+display: flex;
+flex-direction: column;
+color: #fff;
+padding: 0 16px;
+z-index: 98;
+}
+
+.content >h3{
+  font-size: 1.8rem;
+}
+#grid-l .content{
+text-align: center;
+  padding: 32px;
+  }
+
+.card  .content>p{
+  opacity: 0;
+  transition: .2s ease;
+  padding-top: 24px;
+  color: #ccc;
+}
+
+.card:hover .content>p{
+opacity: 1;
+}
+.card:not(#grid-l):hover .content >*{
+  color:var(--text);
+}
+.card{
+height: auto;
+transition: .8s ease;
+position: relative;
+
+}
+.card>a{
+  z-index: 98;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  
+}
+
+.card svg{
+width: 4rem;
+height: auto;
+height: 48px; 
+margin: 0 24px;
+z-index: 98;
+align-self: flex-end;
+}
+
+  #enter-icon{
+  fill: #fff;
+}
+#row2{
+  background-size: 40%;
+}
+#row2>a{
+
+  flex-direction: row;
+}
+
+.card:not(#grid-l):hover .bg{
+  opacity: 0.2;
+
+}
+
+#grid-l{
+  overflow: hidden;
+}
+#grid-l:hover  img{
+transition: .6s ease-in-out;
+}
+#grid-l:hover  img{
+transform: scale(1.2);
+  /* 左 */
+}
+.card .bg {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-r #row1 .card:nth-child(2):hover {
+  background-color: var(--moss);  /* 右-右-下 */
+}
+
+.grid-r .card:nth-child(1):hover {
+  background-color: var(--neutral1);  /* 右上-左 */
+}
+
+#col2 .card:nth-child(1):hover {
+  background-color: var(--skin);  /* 右-右-上 */
+}
+
+#row2:hover {
+  background-image: none !important;
+  background-color: var(--neutral2);   /* 右下 */
+}
+
+.grid-r .card:nth-child(2):hover >a>svg{
+  fill:red;
 }
 
 /* 測驗頁 */
@@ -233,50 +392,4 @@ button{
 }
 #quiz button:nth-child(even){
   background: orange;
-}
-.grid-l{
-  height: 100%;
-  flex: 2;
-}
-.grid-r {
-  flex: 3;
- 
-  height: 100%;
-}
-.grid-r,#col2 {
-
-  display: flex;
-
-}
-.grid-r,.col{
-  flex-direction: column;
-}
-.grid-r div{
-  display: flex;
-  background:  orchid;
-}
-#row1,#col2{
-  flex:3;
-}
-
-#row2,#col1{
-  flex: 2;
-}
-#col2 >div{
-border: 2px solid yellow;
-flex: 1;
-}
-.col{
-  border: 2px solid green;
-}
-#col1{
-  justify-content: space-around;
-}
-.content {
-display: flex;
-flex-direction: column;
-flex:3
-}
-.content >*{
-  background: #fff;
 }
