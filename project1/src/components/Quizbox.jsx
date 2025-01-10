@@ -88,12 +88,17 @@ export default function Quizbox() {
             {chunk.map((question, questionIndex) => (
               <div key={questionIndex} className="question">
                 <strong>問題 {index * chunkSize + questionIndex + 1}: <br /></strong> {question.question}
+
                 <ul style={{
                   display:'flex',
                   
                 }}>
+                                {/* 顯示每個問題的選項 */}
+                  
                   {question.options.map((option, i) => (
                     <li key={i}>
+                                            {/* 單選框，當選擇答案時觸發 handleChange */}
+
                   <input
                         type="radio"
                         id={`question${index * chunkSize + questionIndex}-option${i}`}

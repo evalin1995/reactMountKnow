@@ -21,13 +21,12 @@ padding: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -64,6 +63,17 @@ a{
 --neutral2:#FFF9A3;
 --red:#C62E2E;
 --text:#3C3A36;
+--deep:#686664;
+
+/* 字級 */
+--font-size-xs: .8rem;
+--font-size-s: .85rem;
+--font-size-m: 1rem;
+--font-size-l: 1.2rem;
+--font-size-xl: 1.4rem;
+--font-size-xxl: 1.8rem;
+--font-size-xxxl: 2rem;
+
 }
 body{
   font-family:"Sora", "Chocolate Classical Sans" ;
@@ -128,20 +138,24 @@ img{
   color: #fff;
   padding: 5px;
 }
-
+footer{
+  padding-top: 32px;
+  background-color: var(--primary2);
+  color: #fff;
+}
 /* 首頁 */
 #index-banner{
-  /* width: calc(90vh *1.62); */
+  max-width: calc(90vh *1.62);
   /* max-height: 90vh; */
-  /* height: calc( (100vw - 30px * 2) / 1.62); */
+  /* min-height: calc( (100vw - 30px * 2) / 1.62); */
   height: 90vh;
 }
 #grid-l{
   height: 100%;
-  flex: 2;
+  flex: 3;
 }
 .grid-r {
-  flex: 3;
+  flex: 5;
  
   height: 100%;
 }
@@ -157,25 +171,25 @@ img{
   display: flex;
 }
 #row1{
-  flex:3;
-/* height:calc( 90vh * 0.6 ); */
+  flex:5;
 }
 #col2{
-  flex:3;
+  flex:5;
 
-  /* width: calc( 90vh * 0.6 / 1.62); */
 }
-#row2,#col1{
+#row2{
   flex: 2;
 }
-#col2 >div:nth-child(odd){
-  flex: 3;
+#col2 .card:nth-child(odd){
+  flex: 5;
 }
-#col2 >div:nth-child(even){
-flex: 2;
+#col2 .card:nth-child(even){
+flex: 3;
 }
 
 #col1{
+  flex: 3;
+
   justify-content: space-around;
 }
 .content {
@@ -207,47 +221,61 @@ opacity: 1;
 .card:not(#grid-l):hover .content >*{
   color:var(--text);
 }
+.card:hover span{
+
+color: var(--deep);
+border: 2px solid var(--deep);
+}
 .card{
 height: auto;
 transition: .8s ease;
 position: relative;
-
-}
-.card>a{
   z-index: 98;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
+  align-items: center;
+
 }
 
 .card svg{
-width: 4rem;
-height: auto;
-height: 48px; 
-margin: 0 24px;
+height: 24px; 
+width: auto;
 z-index: 98;
 align-self: flex-end;
+margin-left: 8px;
+transition: .4s ease;
+fill: #fff;
 }
 
-  #enter-icon{
-  fill: #fff;
+.card span:hover svg{
+  transform: rotate(180deg);
 }
 #row2{
-  background-size: 40%;
-}
-#row2>a{
-
+  background-size: 30%;
+  font-family: "LXGW WenKai TC", serif;
   flex-direction: row;
 }
 
 .card:not(#grid-l):hover .bg{
   opacity: 0.2;
-
 }
 
+.card span{
+  border: 2px solid #fff;
+  display: flex;
+color: #fff;
+padding: .2rem 16px;
+font-size: var(--font-size-l);
+transition: none;
+}
 #grid-l{
   overflow: hidden;
+  font-size: var(--font-size-l);
+  font-family: "LXGW WenKai TC", serif;
+}
+#grid-l .content{
+  padding-top: 5rem;
 }
 #grid-l:hover  img{
 transition: .6s ease-in-out;
@@ -260,6 +288,7 @@ transform: scale(1.2);
   position: absolute;
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 .grid-r #row1 .card:nth-child(2):hover {
   background-color: var(--moss);  /* 右-右-下 */
@@ -278,9 +307,7 @@ transform: scale(1.2);
   background-color: var(--neutral2);   /* 右下 */
 }
 
-.grid-r .card:nth-child(2):hover >a>svg{
-  fill:red;
-}
+
 
 /* 測驗頁 */
 #quiz{
@@ -315,6 +342,7 @@ div.question{
 .bg-quiz{
  width: 200px;
 }
+/* 測驗頁 */
 .wrapper{
   position: relative;
 flex-direction: column;
@@ -336,7 +364,8 @@ width:  30%;
 .quiz-bg{
   position: absolute;  /* 利用wrapper的外層定位 */
   width:  30%;
-  fill: var(--primary1);}
+  fill: var(--primary1);
+}
 .quiz-bg:nth-child(odd){
   top: 3%;
   left: 9%;
@@ -353,21 +382,18 @@ width:  30%;
    white-space:nowrap;
 margin: 0 10px;
 }
-  .question ul li input:checked + label {
 
-  text-decoration: line-through;
-  text-decoration-color: var(--red);
-}
-
-#banner{
+.banner{
   background-size: cover;
+  height: 43vh;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  
+}
+#quiz-banner{
   background-image: url(../public/02-web-images0102/explore-image/quiz-banner.jpg);
-height: 43vh;
 background-position: 50% 38%;
-  width: 100%;
   z-index: 99;
-align-items: flex-end;
-padding-bottom: 80px;
 }
 .heading{
 background-image: linear-gradient(transparent 30%,
@@ -380,15 +406,145 @@ transparent 80%
   color: var(--neutral1);
 }
 button{
-  border: 0;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 #quiz button{
   background-color: var(--primary2);
   color: #fff;
   padding: .5rem 1rem;
   border-radius: 8px;
-  cursor: pointer;
 }
 #quiz button:nth-child(even){
   background: orange;
+}
+
+/* 隱藏預設的單選框 */
+.question input[type="radio"] {
+  appearance: none;  /* 移除預設的單選框樣式 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 1rem;  /* 單選框的寬度 */
+  height: 1rem;  /* 單選框的高度 */
+  border: 2px solid var(--deep);  /* 灰色邊框 */
+  border-radius: 4px;  /* 長方形的邊角（非圓形） */
+  background-color: white;  /* 背景顏色為白色 */
+  transition: background-color 0.3s ease, border-color 0.3s ease;  /* 當選擇時，背景顏色與邊框顏色平滑過渡 */
+}
+
+/* 當選擇單選框時的樣式 */
+.question input[type="radio"]:checked {
+  background-color:  var(--red);  /* 當選擇時背景顏色變為綠色 */
+}
+
+/* 當單選框被選中時，顯示一個圓形標示 */
+.question input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 25%;  /* 圓形的位置 */
+  left: 25%;  /* 圓形的位置 */
+  width: 50%;  /* 圓形的寬度 */
+  height: 50%;  /* 圓形的高度 */
+  border-radius: 50%;  /* 使內部元素成為圓形 */
+  background-color: white;  /* 圓形的顏色為白色 */
+}
+
+/* 標籤文字的樣式 */
+.question label {
+  font-size: 1rem;  /* 字體大小 */
+  margin-left: 0.1rem;  /* 左邊距離，讓文字不會與單選框重疊 */
+  cursor: pointer;  /* 滑鼠懸停時顯示為指標手形 */
+  user-select: none;  /* 防止用戶選擇文字 */
+}
+
+/* 設定問題選項列表的樣式 */
+.question ul li {
+  margin: 8px ;  /* 每個選項的上下邊距 */
+  display: flex;
+  align-items: flex-end;
+}
+.question ul  {
+  padding: 0 8px 8px;
+}
+/* 營養分頁 */
+#NuT-banner{
+  background-image:url(./02-web-images0102/nutrition/jonas-allert-6oco8WCnABs-unsplash.jpg) ;
+  background-position: 50% 58%;
+}
+#nuT-wrap{
+  background-image: url(../public/02-web-images0102/nutrition/nutrition-bg.png);
+  background-color: var(--primary2);
+  background-size: 26%;
+  flex-flow: row wrap;
+  padding: 0 3%;
+  min-height: 100vh;
+}
+#nuT-wrap>li {
+  width: 38%;
+  margin: 3% 1% 0;
+  background-color: var(--moss);
+  border: 5px var(--deep) ;
+  border-style:  dashed double;
+border-radius: 16px;
+padding:1% 16px;
+}
+#nuT-wrap li>ul{
+  flex-direction: column;
+flex: 3;
+}
+#nuT-wrap li>ul>li:first-child{
+
+  flex-direction: column;
+  
+}
+#nuT-wrap li ul li:not(.alignC){
+  display: inline-flex;
+flex-wrap: nowrap;  
+align-items: flex-end;
+}
+#nuT-wrap li>.content{
+  flex:5;
+}
+#nuT-wrap li>figure{
+  aspect-ratio: 1 / 1; 
+max-width: 176px;
+width: 65%;
+border-radius: 50%;
+overflow: hidden;
+margin-bottom: 4px;
+}
+#nuT-wrap li img{
+height: 100%;
+object-fit: cover;
+}
+#nuT-wrap li:hover figure>img{
+  transform: scale(1.2);
+}
+#nuT-wrap li>ul>li h4{
+  font-family: "LXGW WenKai TC", serif;
+  white-space: nowrap; 
+  padding-right: 0.5rem;
+  font-size: var(--font-size-xs);
+}
+#nuT-wrap li>ul>li span{
+  height: 0.7rem;
+  background-color: var(--neutral1);
+}
+#nuT-wrap li>ul>li:nth-child(even) span:last-child{
+width: 50px !important;
+}
+#nuT-wrap li>ul>li span:last-child{
+width: 80px;
+}
+#nuT-wrap .content{
+  color: var(--text);
+  flex: 5;
+} 
+
+#nuT-wrap .upD-btn{
+  font-size: var(--font-size-l);
+  border-radius: 8px;
+  margin: 0 200px;
 }

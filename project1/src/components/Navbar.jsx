@@ -7,7 +7,7 @@ export default function Navbar() {
     { engTitle: 'Explore', title: '探索', url: '/explore' },
     { engTitle: 'Wear', title: '裝備', url: '/wear' },
     { engTitle: 'Train', title: '訓練', url: '/about' },
-    { engTitle: 'News', title: '最新', url: '/news' },
+    { engTitle: 'News', title: '營養', url: '/nutrition' },
     { engTitle: 'Quiz', title: '測驗', url: '/quiz' },
   ];
   
