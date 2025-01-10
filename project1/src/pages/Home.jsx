@@ -39,7 +39,7 @@ import Navbar from "../components/Navbar";
     <>
           <Navbar />
       <div className='alignC' id='index-banner'>
-        <Link to={'/nutrition' || '#'} className="card" id='grid-l' >
+        <Link className="card" id='grid-l' >
           <img className='bg' src={contents[0].imgUrl} alt="" />
             <div className="content">
               {contents[0].disC.map((text, index) => (
@@ -49,7 +49,7 @@ import Navbar from "../components/Navbar";
         </Link>
         <div className="grid-r">
           <div className="row" id='row1'>
-            <Link to={'/nutrition' || '#'} className="col card" id='col1' >
+            <Link to={'/' || '#'} className="col card" id='col1' >
               <img className='bg' src={contents[1].imgUrl} alt="" />
                 <div className="content">
                   <h3>{contents[1].title}</h3>
@@ -66,7 +66,7 @@ import Navbar from "../components/Navbar";
                   </div>
                   <span>詳細內容 <Entree /> </span>
               </Link>
-              <Link to={'/nutrition' || '#'} className='card' >
+              <Link to={'/' || '#'} className='card' >
                 <img className='bg' src={contents[3].imgUrl} alt="" />
                   <div className="content">
                     <h3>{contents[3].title}</h3>

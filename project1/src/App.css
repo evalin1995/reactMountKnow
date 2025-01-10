@@ -99,9 +99,13 @@ justify-content: center;
 
 #topbar{
   justify-content: space-between;
-  background-color: var(--primary2-w);
+  background-color: var(--primary2);
   opacity: .9;
   padding: 0 16px;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+z-index: 999;
 }
 .logo>h4{
   flex-direction: column;
@@ -145,9 +149,8 @@ footer{
 }
 /* 首頁 */
 #index-banner{
-  max-width: calc(90vh *1.62);
-  /* max-height: 90vh; */
-  /* min-height: calc( (100vw - 30px * 2) / 1.62); */
+  max-width: calc(121vh *1.62);
+  min-height: calc( (107vh *1.62 - 30px * 2) / 1.62);
   height: 90vh;
 }
 #grid-l{
@@ -167,7 +170,7 @@ footer{
 .grid-r,.col{
   flex-direction: column;
 }
-.grid-r div{
+.grid-r>div{
   display: flex;
 }
 #row1{
@@ -197,7 +200,6 @@ display: flex;
 flex-direction: column;
 color: #fff;
 padding: 0 16px;
-z-index: 98;
 }
 
 .content >h3{
@@ -207,6 +209,31 @@ z-index: 98;
 text-align: center;
   padding: 32px;
   }
+.card>*:not(img){
+
+  z-index: 99;
+}
+.card{
+height: auto;
+transition: .8s ease;
+position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+}
+#index-banner>.card:nth-child(1){
+  cursor: w-resize;
+}
+.card svg{
+height: 24px; 
+width: auto;
+align-self: flex-end;
+margin-left: 8px;
+transition: .4s ease;
+fill: #fff;
+}
 
 .card  .content>p{
   opacity: 0;
@@ -226,28 +253,6 @@ opacity: 1;
 color: var(--deep);
 border: 2px solid var(--deep);
 }
-.card{
-height: auto;
-transition: .8s ease;
-position: relative;
-  z-index: 98;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-.card svg{
-height: 24px; 
-width: auto;
-z-index: 98;
-align-self: flex-end;
-margin-left: 8px;
-transition: .4s ease;
-fill: #fff;
-}
-
 .card span:hover svg{
   transform: rotate(180deg);
 }
@@ -288,7 +293,6 @@ transform: scale(1.2);
   position: absolute;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 .grid-r #row1 .card:nth-child(2):hover {
   background-color: var(--moss);  /* 右-右-下 */
@@ -306,9 +310,27 @@ transform: scale(1.2);
   background-image: none !important;
   background-color: var(--neutral2);   /* 右下 */
 }
+@media (max-width: 640px) {
+#index-banner{
+  flex-direction: column-reverse;
+}
+#grid-l{
+  width: 100%;
+}
+#grid-l .content{
+  padding-top: 7%;
+}
+.grid-r>div{
+flex-direction: row-reverse;
+}
 
+}
+@media (max-width:1023px) {
 
-
+  #index-banner{
+min-height: 100vh;
+  }
+}
 /* 測驗頁 */
 #quiz{
   width: 67%;

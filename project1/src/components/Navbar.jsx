@@ -15,7 +15,9 @@ export default function Navbar() {
     return (
         <>
          <header id="topbar" className='alignC'>
-        <a href="" className="logo"><img src="../public/02-web-images0102/contour2.svg" alt="" /><h4 className='alignC'>山知</h4></a>
+        <a href="" className="logo">
+          <img src="./02-web-images0102/contour2.svg" alt="" />
+          <h4 className='alignC'>山知</h4></a>
         <nav className="navigation">
             <ul className="menu">
             {navItems.map((item, index) => (
