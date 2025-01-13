@@ -123,11 +123,13 @@ export default function Quizbox() {
           <p>你的分數是：{score} / {questions.length}</p>
         </div>
       )}
+<div className="center" style={{}}>
 <button  onClick={handleSubmit}>看結果</button>
       <button  onClick={handleClear}>再試一次</button>
-      </ul>
 
-    </>
+</div>
+</ul>
+</>
   )
 }
 

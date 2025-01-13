@@ -50,8 +50,12 @@ a{
 /* 變數區:顏色’字級設定 */
 :root{
   --shadowColour: rgba(0, 0, 0, .6);
---primary1: #E5A84D;
---primary2: #2A3663;
+--primary1: #DD711F;
+--primary2: #33372C;
+--primary3: #ecf3f2;
+
+--primary3-b: #B1C1C2;
+--neutral-b: #005c55;
 
 --primary2-w: #606C97;
 --primary1-w: #FFF4E6;
@@ -59,8 +63,10 @@ a{
 --skin:#FFD39A;
 --moss:#E3EECD;
 
---neutral1:#2BC07C;
---neutral2:#FFF9A3;
+--neutral1:#557C56;
+--neutral2:#A9A9A9;
+--neutral3:#D6E4E5;
+
 --red:#C62E2E;
 --text:#3C3A36;
 --deep:#686664;
@@ -100,7 +106,7 @@ justify-content: center;
 #topbar{
   justify-content: space-between;
   background-color: var(--primary2);
-  opacity: .9;
+  opacity: .8;
   padding: 0 16px;
   /* position: fixed;
   top: 0;
@@ -149,7 +155,7 @@ footer{
 }
 /* 首頁 */
 #index-banner{
-  max-width: calc(121vh *1.62);
+  /* max-width: calc(121vh *1.62); */
   min-height: calc( (107vh *1.62 - 30px * 2) / 1.62);
   height: 90vh;
 }
@@ -239,16 +245,17 @@ fill: #fff;
   opacity: 0;
   transition: .2s ease;
   padding-top: 24px;
-  color: #ccc;
+  color: #fff;
 }
 
 .card:hover .content>p{
 opacity: 1;
 }
-.card:not(#grid-l):hover .content >*{
+.grid-r .card#col1:hover .content >*{
+
   color:var(--text);
 }
-.card:hover span{
+.grid-r .card#col1:hover span {
 
 color: var(--deep);
 border: 2px solid var(--deep);
@@ -273,6 +280,7 @@ color: #fff;
 padding: .2rem 16px;
 font-size: var(--font-size-l);
 transition: none;
+margin-bottom: 8px;
 }
 #grid-l{
   overflow: hidden;
@@ -295,21 +303,30 @@ transform: scale(1.2);
   object-fit: cover;
 }
 .grid-r #row1 .card:nth-child(2):hover {
-  background-color: var(--moss);  /* 右-右-下 */
+  background-color: var(--primary1);  /* 右-右-下 */
 }
 
 .grid-r .card:nth-child(1):hover {
-  background-color: var(--neutral1);  /* 右上-左 */
+  background-color: var(--primary3);  /* 右上-左 */
 }
 
 #col2 .card:nth-child(1):hover {
-  background-color: var(--skin);  /* 右-右-上 */
+  background-color: var(--neutral1);  /* 右-右-上 */
 }
 
-#row2:hover {
-  background-image: none !important;
-  background-color: var(--neutral2);   /* 右下 */
+#row2 {
+  background-image:
+  linear-gradient(
+  transparent 0,  
+  rgba(111, 128, 129,0.8) 0,
+  rgba(111, 128, 129, 0.9) 99%,
+  transparent 99%),
+  url(../public/02-web-images0102/banner-bottom.png)
+  ;
+  backdrop-filter: blur(5px);
+  background-color: var(--primary3-b);
 }
+
 @media (max-width: 640px) {
 #index-banner{
   flex-direction: column-reverse;
@@ -328,9 +345,13 @@ flex-direction: row-reverse;
 @media (max-width:1023px) {
 
   #index-banner{
-min-height: 100vh;
+min-height: 94vh;
   }
 }
+@media (min-width:1024px) {
+  #index-banner{
+padding: 0 16px;
+}}
 /* 測驗頁 */
 #quiz{
   width: 67%;
@@ -350,12 +371,26 @@ min-height: 100vh;
   transition: .5s ease-in;
   z-index: 99;
   width: 100%;
+  margin-bottom: 24px;
+}
+#quiz:hover .quiz-box:nth-child(even){
+transform: none;
 }
 .quiz-box:nth-child(even){
   background-position: 50% 20%;
 }
-
-
+.quiz-box:nth-child(odd){
+  transform: rotate(5deg);
+}
+.quiz-box:nth-child(odd):hover{
+  transform: none;
+}
+.quiz-box:nth-child(even){
+  transform: rotate(-10deg);
+}
+.quiz-box:last-child{
+  margin-left: 24px;
+}
 div.question{
   display:flex;
   flex-direction:column;
@@ -369,24 +404,17 @@ div.question{
   position: relative;
 flex-direction: column;
 padding: 0 2%;
-background-color:var(--primary1-w) ;
+background-image:linear-gradient(
+ rgba(169,169,169,.7) 1%,
+ rgba(169,169,169,.7) 99%),
+  url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash\ 1.png);
+  background-size: 60%;
 }
-.svg-background {
+.wrapper svg{
   position: absolute;  /* 利用wrapper的外層定位 */
-width:  30%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-.svg-background >svg{
-  fill: var(--primary1);
-  height: 100%;
-  object-fit: cover;
-}
-.quiz-bg{
-  position: absolute;  /* 利用wrapper的外層定位 */
+
   width:  30%;
-  fill: var(--primary1);
+  color: #fff;  /* 定義svg檔色彩 */
 }
 .quiz-bg:nth-child(odd){
   top: 3%;
@@ -395,6 +423,11 @@ width:  30%;
 .quiz-bg:nth-child(even){
   top: 6%;
   right: 3%;
+}
+.quiz-bg:last-child{
+  top: 58%;
+  right: -3%;
+  transform: rotate(90deg);
 }
 .question>ul{
   width: 100%;
@@ -419,8 +452,8 @@ background-position: 50% 38%;
 }
 .heading{
 background-image: linear-gradient(transparent 30%,
-var(--neutral2) 30%,
-var(--neutral2) 80%,
+var(--neutral3) 30%,
+var(--neutral3) 80%,
 transparent 80%
 );
 }
@@ -437,6 +470,11 @@ button{
   color: #fff;
   padding: .5rem 1rem;
   border-radius: 8px;
+  margin-left: 6%;
+white-space: nowrap;
+}
+#quiz >div:last-child{
+  margin-top: 6%;
 }
 #quiz button:nth-child(even){
   background: orange;
@@ -497,16 +535,28 @@ button{
 }
 #nuT-wrap{
   background-image: url(../public/02-web-images0102/nutrition/nutrition-bg.png);
-  background-color: var(--primary2);
+  background-color: var(--primary3);
   background-size: 26%;
-  flex-flow: row wrap;
   padding: 0 3%;
   min-height: 100vh;
+  padding-bottom: 5%;
+  flex-flow: row wrap;
+}
+@media (max-width:1023px) {
+#nuT-wrap{
+  flex-flow: column nowrap;
+  
 }
 #nuT-wrap>li {
-  width: 38%;
+  flex-direction: column;
+}
+#nuT-wrap li>figure{
+width: 27% !important;}
+}
+#nuT-wrap>li {
+  width: 70%;
   margin: 3% 1% 0;
-  background-color: var(--moss);
+  background-color: rgba(255,255,255,.9);
   border: 5px var(--deep) ;
   border-style:  dashed double;
 border-radius: 16px;
@@ -531,7 +581,6 @@ align-items: flex-end;
 }
 #nuT-wrap li>figure{
   aspect-ratio: 1 / 1; 
-max-width: 176px;
 width: 65%;
 border-radius: 50%;
 overflow: hidden;
@@ -569,4 +618,15 @@ width: 80px;
   font-size: var(--font-size-l);
   border-radius: 8px;
   margin: 0 200px;
+  background-color: var(--primary2);
+  color: #fff;
+}
+@media (min-width:1024px) {
+  #nuT-wrap>li {
+    width: 38%;
+  }  
+  #nuT-wrap li>figure{
+max-width: 176px;
+  
+  }
 }

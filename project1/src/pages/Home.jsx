@@ -24,7 +24,7 @@ import Navbar from "../components/Navbar";
     {
       title: "登山知識測驗",
       disC: "測試您的戶外導航技巧。",
-      imgUrl: './02-web-images0102/banner-bottom1.png'
+      imgUrl: ''
     },
   ];
 
@@ -77,7 +77,7 @@ import Navbar from "../components/Navbar";
             </div>
           </div>
           <Link to={'/quiz' || '#'} className="row card" id='row2' style={{
-            backgroundImage: `url(${contents[4].imgUrl})`
+            // backgroundImage: `url(${contents[4].imgUrl})`
           }}>
               <div className="content">
                 <h3>{contents[4].title}</h3>
@@ -94,7 +94,8 @@ import Navbar from "../components/Navbar";
       }}>
       <svg  id='enter-icon' xmlns="http://www.w3.org/2000/svg" width="48" height="42" fill="currentColor" viewBox="0 0 48 42">
         <path d="M33 6h6c1.66 0 3 1.34 3 3v24c0 1.66-1.34 3-3 3h-6c-1.66 0-3 1.34-3 3s1.34 3 3 3h6c4.969 0 9-4.031 9-9V9c0-4.969-4.031-9-9-9h-6c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-.881 17.119a3.005 3.005 0 0 0 0-4.247l-12-12a3.005 3.005 0 0 0-4.247 0 3.005 3.005 0 0 0 0 4.247L22.753 18H3c-1.66 0-3 1.34-3 3s1.34 3 3 3h19.753l-6.881 6.881a3.005 3.005 0 0 0 0 4.247 3.005 3.005 0 0 0 4.247 0l12-12v-.01Z" />
-      </svg></h1>
+      </svg>
+      </h1>
 
 
 
