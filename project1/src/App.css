@@ -1,109 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=LXGW+WenKai+TC&family=Sora:wght@100..800&display=swap');
 
-/* vite預設 */
-#root {
-  margin: 0 auto;
-  padding: 2rem;
-  /* text-align: center; */
-}
 
 
-.read-the-docs {
-  color: #888;
-}
-
-/* 清除預設 */
-#root {
-width: 100%;
-padding: 0;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-li,ol, ul {
-	list-style: none;
-}
-a{
-  text-decoration: none;
-}
 /* 變數區:顏色’字級設定 */
-:root{
+:root {
   --shadowColour: rgba(0, 0, 0, .6);
---primary1: #DD711F;
---primary2: #33372C;
---primary3: #ecf3f2;
+  --primary1: #DD711F;
+  --primary2: #33372C;
+  --primary3: #ecf3f2;
 
---primary3-b: #B1C1C2;
---neutral-b: #005c55;
+  --primary3-b: #B1C1C2;
+  --neutral-b: #005c55;
 
---primary2-w: #606C97;
---primary1-w: #FFF4E6;
+  --primary2-w: #606C97;
+  --primary1-w: #FFF4E6;
 
---skin:#FFD39A;
---moss:#E3EECD;
+  --skin: #FFD39A;
+  --moss: #E3EECD;
 
---neutral1:#557C56;
---neutral2:#A9A9A9;
---neutral3:#D6E4E5;
+  --neutral1: #557C56;
+  --neutral2: #A9A9A9;
+  --neutral3: #D6E4E5;
 
---red:#C62E2E;
---text:#3C3A36;
---deep:#686664;
+  --red: #C62E2E;
+  --text: #3C3A36;
+  --deep: #686664;
 
-/* 字級 */
---font-size-xs: .8rem;
---font-size-s: .85rem;
---font-size-m: 1rem;
---font-size-l: 1.2rem;
---font-size-xl: 1.4rem;
---font-size-xxl: 1.8rem;
---font-size-xxxl: 2rem;
+  /* 字級 */
+  --font-size-xs: .8rem;
+  --font-size-s: .85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.2rem;
+  --font-size-xl: 1.4rem;
+  --font-size-xxl: 1.8rem;
+  --font-size-xxxl: 2rem;
 
 }
-body{
-  font-family:"Sora", "Chocolate Classical Sans" ;
+
+body {
+  font-family: "Sora", "Chocolate Classical Sans";
   color: var(--text);
 }
-h1{
+
+h1 {
   font-size: 3rem;
 }
+
 /* 選擇置中 */
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.alignC{
+
+.alignC {
   display: flex;
   align-items: center;
 }
-.justFC{
+
+.justFC {
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
-#topbar{
+#topbar {
   justify-content: space-between;
   background-color: var(--primary2);
   opacity: .8;
@@ -111,260 +71,314 @@ justify-content: center;
   /* position: fixed;
   top: 0;
   left: 0; */
-z-index: 999;
+  z-index: 999;
 }
-.logo>h4{
+
+.logo>h4 {
   flex-direction: column;
   font-weight: 600;
   color: var(--primary1);
 }
-#topbar>svg{
+
+#topbar>svg {
   width: 100%;
 }
-.logo{
+
+.logo {
   display: flex;
-  width: 60px;  font-family: "LXGW WenKai TC", serif;
+  width: 60px;
+  font-family: "LXGW WenKai TC", serif;
 
 }
-img{
-  width: 100%;
-}
+
 /* 導覽列內容 */
-  .navigation{
+.navigation {
   display: flex;
   justify-content: space-around;
 }
+
 /* 選單 */
-.navigation>ul{
+.navigation>ul {
   display: flex;
   width: 100%;
 }
-.navigation>ul>li{
+
+.navigation>ul>li {
   display: flex;
   transition: .4s;
 }
 
-.navigation>ul>li>*{
+.navigation>ul>li>* {
   color: #fff;
   padding: 5px;
 }
-footer{
+
+footer {
   padding-top: 32px;
   background-color: var(--primary2);
   color: #fff;
 }
+
 /* 首頁 */
-#index-banner{
+#index-banner {
   /* max-width: calc(121vh *1.62); */
-  min-height: calc( (107vh *1.62 - 30px * 2) / 1.62);
+  min-height: calc((107vh *1.62 - 30px * 2) / 1.62);
   height: 90vh;
 }
-#grid-l{
+
+#grid-l {
   height: 100%;
   flex: 3;
 }
+
 .grid-r {
   flex: 5;
- 
+
   height: 100%;
 }
-.grid-r,#col2 {
+
+.grid-r,
+#col2 {
 
   display: flex;
 
 }
-.grid-r,.col{
+
+.grid-r,
+.col {
   flex-direction: column;
 }
-.grid-r>div{
+
+.grid-r>div,
+a {
   display: flex;
 }
-#row1{
-  flex:5;
-}
-#col2{
-  flex:5;
 
-}
-#row2{
-  flex: 2;
-}
-#col2 .card:nth-child(odd){
+#row1 {
   flex: 5;
 }
-#col2 .card:nth-child(even){
-flex: 3;
+
+#col2 {
+  flex: 5;
+
 }
 
-#col1{
+#row2 {
+  flex: 2;
+}
+
+#col2 .card:nth-child(odd) {
+  flex: 5;
+}
+
+#col2 .card:nth-child(even) {
+  flex: 3;
+}
+
+#col1 {
   flex: 3;
 
   justify-content: space-around;
 }
+
 .content {
-display: flex;
-flex-direction: column;
-color: #fff;
-padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 0 16px;
 }
 
-.content >h3{
+.content>h3 {
   font-size: 1.8rem;
 }
-#grid-l .content{
-text-align: center;
-  padding: 32px;
-  }
-.card>*:not(img){
 
-  z-index: 99;
+#grid-l .content {
+  text-align: center;
+  padding: 32px;
 }
-.card{
-height: auto;
-transition: .8s ease;
-position: relative;
+
+.card {
+  height: auto;
+  transition: .8s ease;
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-
+overflow-y: hidden;
 }
-#index-banner>.card:nth-child(1){
+
+.card>*:not(img) {
+  z-index: 99;
+}
+
+.card:not(#grid-l):hover .bg {
+  opacity: 0.2;
+}
+
+.card .bg {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+}
+
+#index-banner>.card:nth-child(1) {
   cursor: w-resize;
 }
-.card svg{
-height: 24px; 
-width: auto;
-align-self: flex-end;
-margin-left: 8px;
-transition: .4s ease;
-fill: #fff;
+
+.card svg {
+  height: 24px;
+  width: auto;
+  align-self: flex-end;
+  margin-left: 8px;
+  transition: .4s ease;
+  fill: #fff;
 }
 
-.card  .content>p{
+.card .content>p {
   opacity: 0;
   transition: .2s ease;
   padding-top: 24px;
   color: #fff;
 }
 
-.card:hover .content>p{
-opacity: 1;
+.card:hover .content>p {
+  opacity: 1;
 }
-.grid-r .card#col1:hover .content >*{
 
-  color:var(--text);
+.grid-r .card#col1:hover .content>* {
+
+  color: var(--text);
 }
+
 .grid-r .card#col1:hover span {
 
-color: var(--deep);
-border: 2px solid var(--deep);
+  color: var(--deep);
+  border: 2px solid var(--deep);
 }
-.card span:hover svg{
+
+.card span:hover svg {
   transform: rotate(180deg);
 }
-#row2{
+
+#row2 {
   background-size: 30%;
   font-family: "LXGW WenKai TC", serif;
   flex-direction: row;
 }
 
-.card:not(#grid-l):hover .bg{
-  opacity: 0.2;
-}
 
-.card span{
+.card span {
   border: 2px solid #fff;
   display: flex;
-color: #fff;
-padding: .2rem 16px;
-font-size: var(--font-size-l);
-transition: none;
-margin-bottom: 8px;
+  color: #fff;
+  padding: .2rem 16px;
+  font-size: var(--font-size-l);
+  transition: none;
+  margin-bottom: 8px;
+  align-self: flex-end;
+  margin-right: 24px;
 }
-#grid-l{
+
+#grid-l {
   overflow: hidden;
   font-size: var(--font-size-l);
   font-family: "LXGW WenKai TC", serif;
 }
-#grid-l .content{
+
+#grid-l .content {
   padding-top: 5rem;
 }
-#grid-l:hover  img{
-transition: .6s ease-in-out;
-}
-#grid-l:hover  img{
-transform: scale(1.2);
-  /* 左 */
-}
-.card .bg {
-  position: absolute;
-  height: 100%;
-  object-fit: cover;
-}
-.grid-r #row1 .card:nth-child(2):hover {
-  background-color: var(--primary1);  /* 右-右-下 */
+
+#grid-l:hover img {
+  transition: .6s ease-in-out;
 }
 
-.grid-r .card:nth-child(1):hover {
-  background-color: var(--primary3);  /* 右上-左 */
+#grid-l:hover img {
+  transform: scale(1.2);
+  /* 左 */
+}
+.grid-r #row1 .card:nth-child(2)>img{
+top: -17%;
+left: 0;
+height: 120%;
+}
+.grid-r #row1 .card:nth-child(2):hover {
+  background-color: var(--primary1);
+  /* 右-右-下 */
+}
+#row1>.card:first-child img{
+  height: 113%;
+  left: 0%;
+  top: -10%;
+}
+#row1>.card:first-child:hover {
+  background-color: var(--primary3-b);
+  /* 右上-左 */
 }
 
 #col2 .card:nth-child(1):hover {
-  background-color: var(--neutral1);  /* 右-右-上 */
+  background-color: var(--neutral1);
+  /* 右-右-上 */
 }
 
 #row2 {
   background-image:
-  linear-gradient(
-  transparent 0,  
-  rgba(111, 128, 129,0.8) 0,
-  rgba(111, 128, 129, 0.9) 99%,
-  transparent 99%),
-  url(../public/02-web-images0102/banner-bottom.png)
-  ;
+    linear-gradient(rgba(111, 128, 129, 0.8) 0,
+      rgba(111, 128, 129, 0.9) 99%),
+    url(../public/02-web-images0102/banner-bottom.png);
   backdrop-filter: blur(5px);
   background-color: var(--primary3-b);
 }
 
 @media (max-width: 640px) {
-#index-banner{
-  flex-direction: column-reverse;
-}
-#grid-l{
-  width: 100%;
-}
-#grid-l .content{
-  padding-top: 7%;
-}
-.grid-r>div{
-flex-direction: row-reverse;
-}
+  #index-banner {
+    flex-direction: column-reverse;
+  }
+
+  #grid-l {
+    width: 100%;
+  }
+
+  #grid-l .content {
+    padding-top: 7%;
+  }
+
+  .grid-r>div {
+    flex-direction: row-reverse;
+  }
 
 }
+
 @media (max-width:1023px) {
 
-  #index-banner{
-min-height: 94vh;
+  #index-banner {
+    min-height: 94vh;
   }
 }
+
 @media (min-width:1024px) {
-  #index-banner{
-padding: 0 16px;
-}}
+  #index-banner {
+    padding: 0 16px;
+  }
+}
+
 /* 測驗頁 */
-#quiz{
+#quiz {
   width: 67%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;  /* 防止內容被切到 */
+  margin-bottom: 60px;
+  /* 防止內容被切到 */
 }
-#quiz>p{
+
+#quiz>p {
   padding-top: 5%;
   width: 70%;
 }
-.quiz-box{
+
+.quiz-box {
   background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
   background-size: cover;
   margin-top: 6%;
@@ -373,260 +387,352 @@ padding: 0 16px;
   width: 100%;
   margin-bottom: 24px;
 }
-#quiz:hover .quiz-box:nth-child(even){
-transform: none;
-}
-.quiz-box:nth-child(even){
-  background-position: 50% 20%;
-}
-.quiz-box:nth-child(odd){
-  transform: rotate(5deg);
-}
-.quiz-box:nth-child(odd):hover{
+
+#quiz:hover .quiz-box:nth-child(even) {
   transform: none;
 }
-.quiz-box:nth-child(even){
+
+.quiz-box:nth-child(even) {
+  background-position: 50% 20%;
+}
+
+.quiz-box:nth-child(odd) {
+  transform: rotate(5deg);
+}
+
+.quiz-box:nth-child(odd):hover {
+  transform: none;
+}
+
+.quiz-box:nth-child(even) {
   transform: rotate(-10deg);
 }
-.quiz-box:last-child{
+
+.quiz-box:last-child {
   margin-left: 24px;
 }
-div.question{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+
+div.question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.bg-quiz{
- width: 200px;
+
+.bg-quiz {
+  width: 200px;
 }
+
 /* 測驗頁 */
-.wrapper{
+.wrapper {
   position: relative;
-flex-direction: column;
-padding: 0 2%;
-background-image:linear-gradient(
- rgba(169,169,169,.7) 1%,
- rgba(169,169,169,.7) 99%),
-  url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash\ 1.png);
+  flex-direction: column;
+  padding: 0 2%;
+  background-image: linear-gradient(rgba(169, 169, 169, .7) 1%,
+      rgba(169, 169, 169, .7) 99%),
+    url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash\ 1.png);
   background-size: 60%;
 }
-.wrapper svg{
-  position: absolute;  /* 利用wrapper的外層定位 */
 
-  width:  30%;
-  color: #fff;  /* 定義svg檔色彩 */
+.wrapper svg {
+  position: absolute;
+  /* 利用wrapper的外層定位 */
+
+  width: 30%;
+  color: #fff;
+  /* 定義svg檔色彩 */
 }
-.quiz-bg:nth-child(odd){
+
+.quiz-bg:nth-child(odd) {
   top: 3%;
   left: 9%;
 }
-.quiz-bg:nth-child(even){
+
+.quiz-bg:nth-child(even) {
   top: 6%;
   right: 3%;
 }
-.quiz-bg:last-child{
+
+.quiz-bg:last-child {
   top: 58%;
-  right: -3%;
+  right: 19%;
   transform: rotate(90deg);
 }
-.question>ul{
+
+.question>ul {
   width: 100%;
   flex-wrap: wrap;
 }
-.question>ul>li{
-   white-space:nowrap;
-margin: 0 10px;
+
+.question>ul>li {
+  white-space: nowrap;
+  margin: 0 10px;
 }
 
-.banner{
+.banner {
   background-size: cover;
   height: 43vh;
   align-items: flex-end;
   padding-bottom: 80px;
-  
+
 }
-#quiz-banner{
-  background-image: url(../public/02-web-images0102/explore-image/quiz-banner.jpg);
-background-position: 50% 38%;
+
+#quiz-banner {
+  background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-.jpg);
+  background-position: 50% 38%;
   z-index: 99;
 }
-.heading{
-background-image: linear-gradient(transparent 30%,
-var(--neutral3) 30%,
-var(--neutral3) 80%,
-transparent 80%
-);
+
+.heading {
+  background-image: linear-gradient(transparent 30%,
+      var(--neutral3) 30%,
+      var(--neutral3) 80%,
+      transparent 80%);
 }
-.heading>span{
+
+.heading>span {
   color: var(--neutral1);
 }
-button{
+
+button {
   border: none;
   padding: 8px 16px;
   cursor: pointer;
 }
-#quiz button{
+
+#quiz button {
   background-color: var(--primary2);
   color: #fff;
   padding: .5rem 1rem;
   border-radius: 8px;
   margin-left: 6%;
-white-space: nowrap;
+  white-space: nowrap;
 }
-#quiz >div:last-child{
+
+#quiz>div:last-child {
   margin-top: 6%;
 }
-#quiz button:nth-child(even){
+
+#quiz button:nth-child(even) {
   background: orange;
 }
 
 /* 隱藏預設的單選框 */
 .question input[type="radio"] {
-  appearance: none;  /* 移除預設的單選框樣式 */
+  appearance: none;
+  /* 移除預設的單選框樣式 */
   -webkit-appearance: none;
   -moz-appearance: none;
   position: relative;
-  width: 1rem;  /* 單選框的寬度 */
-  height: 1rem;  /* 單選框的高度 */
-  border: 2px solid var(--deep);  /* 灰色邊框 */
-  border-radius: 4px;  /* 長方形的邊角（非圓形） */
-  background-color: white;  /* 背景顏色為白色 */
-  transition: background-color 0.3s ease, border-color 0.3s ease;  /* 當選擇時，背景顏色與邊框顏色平滑過渡 */
+  width: 1rem;
+  /* 單選框的寬度 */
+  height: 1rem;
+  /* 單選框的高度 */
+  border: 2px solid var(--deep);
+  /* 灰色邊框 */
+  border-radius: 4px;
+  /* 長方形的邊角（非圓形） */
+  background-color: white;
+  /* 背景顏色為白色 */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  /* 當選擇時，背景顏色與邊框顏色平滑過渡 */
 }
 
 /* 當選擇單選框時的樣式 */
 .question input[type="radio"]:checked {
-  background-color:  var(--red);  /* 當選擇時背景顏色變為綠色 */
+  background-color: var(--red);
+  /* 當選擇時背景顏色變為綠色 */
 }
 
 /* 當單選框被選中時，顯示一個圓形標示 */
 .question input[type="radio"]:checked::after {
   content: "";
   position: absolute;
-  top: 25%;  /* 圓形的位置 */
-  left: 25%;  /* 圓形的位置 */
-  width: 50%;  /* 圓形的寬度 */
-  height: 50%;  /* 圓形的高度 */
-  border-radius: 50%;  /* 使內部元素成為圓形 */
-  background-color: white;  /* 圓形的顏色為白色 */
+  top: 25%;
+  /* 圓形的位置 */
+  left: 25%;
+  /* 圓形的位置 */
+  width: 50%;
+  /* 圓形的寬度 */
+  height: 50%;
+  /* 圓形的高度 */
+  border-radius: 50%;
+  /* 使內部元素成為圓形 */
+  background-color: white;
+  /* 圓形的顏色為白色 */
 }
 
 /* 標籤文字的樣式 */
 .question label {
-  font-size: 1rem;  /* 字體大小 */
-  margin-left: 0.1rem;  /* 左邊距離，讓文字不會與單選框重疊 */
-  cursor: pointer;  /* 滑鼠懸停時顯示為指標手形 */
-  user-select: none;  /* 防止用戶選擇文字 */
+  font-size: 1rem;
+  /* 字體大小 */
+  margin-left: 0.1rem;
+  /* 左邊距離，讓文字不會與單選框重疊 */
+  cursor: pointer;
+  /* 滑鼠懸停時顯示為指標手形 */
+  user-select: none;
+  /* 防止用戶選擇文字 */
 }
 
 /* 設定問題選項列表的樣式 */
 .question ul li {
-  margin: 8px ;  /* 每個選項的上下邊距 */
+  margin: 8px;
+  /* 每個選項的上下邊距 */
   display: flex;
   align-items: flex-end;
 }
-.question ul  {
+
+.question ul {
   padding: 0 8px 8px;
 }
+
 /* 營養分頁 */
-#NuT-banner{
-  background-image:url(../public/02-web-images0102/nutrition/jonas-allert-6oco8WCnABs-unsplash.jpg) ;
+#NuT-banner {
+  background-image: url(../public/02-web-images0102/nutrition/nuTbg_jonas-allert-6oco8WCnABs-unsplash.jpg);
   background-position: 50% 58%;
 }
-#nuT-wrap{
+
+#nuT-wrap {
   background-image: url(../public/02-web-images0102/nutrition/nutrition-bg.png);
   background-color: var(--primary3);
   background-size: 26%;
-  padding: 0 3%;
+  padding: 5% 3% 0;
   min-height: 100vh;
   padding-bottom: 5%;
   flex-flow: row wrap;
 }
-@media (max-width:1023px) {
-#nuT-wrap{
-  flex-flow: column nowrap;
-  
-}
-#nuT-wrap>li {
-  flex-direction: column;
-}
-#nuT-wrap li>figure{
-width: 27% !important;}
-}
+
 #nuT-wrap>li {
   width: 70%;
   margin: 3% 1% 0;
-  background-color: rgba(255,255,255,.9);
-  border: 5px var(--deep) ;
-  border-style:  dashed double;
-border-radius: 16px;
-padding:1% 16px;
+  background-color: rgba(255, 255, 255, .9);
+  border: 5px var(--deep);
+  border-style: dashed double;
+  border-radius: 16px;
+  padding: 1% 16px;
+  transition: .5s ease-out;
 }
-#nuT-wrap li>ul{
+
+#nuT-wrap li>ul {
   flex-direction: column;
-flex: 3;
+  flex: 3;
 }
-#nuT-wrap li>ul>li:first-child{
+
+#nuT-wrap li>ul>li:first-child {
 
   flex-direction: column;
-  
+
 }
-#nuT-wrap li ul li:not(.alignC){
+
+#nuT-wrap li ul li:not(.alignC) {
   display: inline-flex;
-flex-wrap: nowrap;  
-align-items: flex-end;
+  flex-wrap: nowrap;
+  align-items: flex-end;
 }
-#nuT-wrap li>.content{
-  flex:5;
+
+#nuT-wrap li>.content {
+  flex: 5;
 }
-#nuT-wrap li>figure{
-  aspect-ratio: 1 / 1; 
-width: 65%;
-border-radius: 50%;
-overflow: hidden;
-margin-bottom: 4px;
+
+#nuT-wrap li>figure {
+  aspect-ratio: 1 / 1;
+  width: 43%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 4px;
 }
-#nuT-wrap li img{
-height: 100%;
-object-fit: cover;
+
+#nuT-wrap>li img {
+  height: 100%;
+  object-fit: cover;
 }
-#nuT-wrap li:hover figure>img{
+
+#nuT-wrap>li:nth-child(2n) {
+  transform: rotate(-8deg);
+}
+
+#nuT-wrap>li:nth-child(odd) {
+  transform: translate(0, -6%);
+  ;
+}
+
+#nuT-wrap>li:nth-child(3n-1) {
+  transform: rotate(5deg);
+}
+
+#nuT-wrap>li:hover {
+  transform: none;
+}
+
+#nuT-wrap>li:hover figure>img {
   transform: scale(1.2);
 }
-#nuT-wrap li>ul>li h4{
+
+#nuT-wrap li>ul>li h4 {
   font-family: "LXGW WenKai TC", serif;
-  white-space: nowrap; 
+  white-space: nowrap;
   padding-right: 0.5rem;
   font-size: var(--font-size-xs);
 }
-#nuT-wrap li>ul>li span{
+
+#nuT-wrap li>ul>li span {
   height: 0.7rem;
   background-color: var(--neutral1);
 }
-#nuT-wrap li>ul>li:nth-child(even) span:last-child{
-width: 50px !important;
+
+#nuT-wrap li>ul>li:nth-child(even) span:last-child {
+  width: 50px !important;
 }
-#nuT-wrap li>ul>li span:last-child{
-width: 80px;
+
+#nuT-wrap li>ul>li span:last-child {
+  width: 80px;
 }
-#nuT-wrap .content{
+
+#nuT-wrap .content {
   color: var(--text);
   flex: 5;
-} 
+}
 
-#nuT-wrap .upD-btn{
+#nuT-wrap .upD-btn {
   font-size: var(--font-size-l);
   border-radius: 8px;
-  margin: 0 200px;
+  margin: 7% 0;
   background-color: var(--primary2);
   color: #fff;
 }
+
+@media (max-width:1023px) {
+  #nuT-wrap {
+    flex-flow: column nowrap;
+
+  }
+
+  #nuT-wrap>li {
+    flex-direction: column;
+  }
+
+  #nuT-wrap li>figure {
+    width: 27%;
+  }
+}
+
+@media (min-width:1024px) {
+  #nuT-wrap li>figure {
+
+    width: 65% !important;
+  }
+
+  #nuT-wrap {
+    align-items: normal;
+  }
+}
+
 @media (min-width:1024px) {
   #nuT-wrap>li {
     width: 38%;
-  }  
-  #nuT-wrap li>figure{
-max-width: 176px;
-  
+  }
+
+  #nuT-wrap .upD-btn {
+    margin: 7% 200px;
+
   }
 }

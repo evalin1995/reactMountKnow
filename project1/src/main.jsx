@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './css/style.min.css'
 import App from './App.jsx'
 import { BrowserRouter, HashRouter } from 'react-router-dom'
 

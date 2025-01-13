@@ -19,7 +19,7 @@ import Navbar from "../components/Navbar";
     {
       title: "探索未知",
       disC: "探索台灣最受歡迎的輕鬆步道，本站蒐羅時程、地形、熱門程度。",
-      imgUrl: './02-web-images0102/oleg-kryzhanovskyi-BOdlu-2J2hg-unsplash.jpg'
+      imgUrl: './02-web-images0102/explore-image/home_oleg-kryzhanovskyi-BOdlu-2J2hg-unsplash.jpg'
     },
     {
       title: "登山知識測驗",
