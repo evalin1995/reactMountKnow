@@ -112,7 +112,11 @@ h1 {
   color: #fff;
   padding: 5px;
 }
-
+@media (max-width:1023px) {
+  .navigation li p{
+    display: none;
+  }
+}
 footer {
   padding-top: 32px;
   background-color: var(--primary2);
@@ -305,7 +309,7 @@ height: 120%;
 }
 .grid-r #row1 .card:nth-child(2):hover {
   background-color: var(--primary1);
-  /* 右-右-下 */
+  /* 右上-右-下 */
 }
 #row1>.card:first-child img{
   height: 113%;
@@ -319,7 +323,7 @@ height: 120%;
 
 #col2 .card:nth-child(1):hover {
   background-color: var(--neutral1);
-  /* 右-右-上 */
+  /* 右上-右-上 */
 }
 
 #row2 {
@@ -355,12 +359,35 @@ height: 120%;
   #index-banner {
     min-height: 94vh;
   }
-}
+  .card .content>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    /*行數於區塊中設定-webkit-line-clamp: ;*/
+    text-align: justify;
 
-@media (min-width:1024px) {
-  #index-banner {
-    padding: 0 16px;
   }
+  
+
+  .grid-r #row1 .card:nth-child(2) .content>p{
+    -webkit-line-clamp:2;
+    line-clamp:2;
+
+  }
+    #col2 .card:nth-child(1) .content>p{
+      -webkit-line-clamp:2;
+      line-clamp:2;
+  
+    }
+  }
+
+  @media (min-width:1024px) {
+    #index-banner {
+      padding: 0 16px;
+    } 
 }
 
 /* 測驗頁 */
@@ -429,7 +456,7 @@ div.question {
   padding: 0 2%;
   background-image: linear-gradient(rgba(169, 169, 169, .7) 1%,
       rgba(169, 169, 169, .7) 99%),
-    url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash\ 1.png);
+    url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
   background-size: 60%;
 }
 
@@ -477,9 +504,10 @@ div.question {
 }
 
 #quiz-banner {
-  background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-.jpg);
+  background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
   background-position: 50% 38%;
   z-index: 99;
+  height: 52vh;
 }
 
 .heading {
@@ -699,7 +727,14 @@ button {
   background-color: var(--primary2);
   color: #fff;
 }
-
+@media (max-width: 640px) {
+#nuT-wrap li{
+  transform: none !important;
+}
+#nuT-wrap li figure{
+  width: 43% !important;
+}
+}
 @media (max-width:1023px) {
   #nuT-wrap {
     flex-flow: column nowrap;

@@ -23,7 +23,7 @@ export default function Navbar() {
             {navItems.map((item, index) => (
               <li key={index}>
                 <Link to={item.url || '#'}>
-                  {item.engTitle}
+                  <p>{item.engTitle}</p>
                   <span>{item.title}</span>
                 </Link>
               </li>
