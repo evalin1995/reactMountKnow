@@ -141,15 +141,22 @@ footer {
   padding-top: 32px;
   background-color: var(--primary2);
   color: #fff;
+  position: relative;
 }
 footer a{
   cursor: default;
 }
-footer small{
-  margin-right: auto;
+footer small:nth-child(1){
   align-self: center;
-  width: auto;
-  display: inline-block;
+  margin: 0 auto;
+}
+  footer>small:last-child{
+  position: absolute;
+  font-size: var(--font-size-xs);
+  width: 33%;
+  bottom: 1%;
+  color: var(--neutral2);
+  opacity: .8;
 }
 .logo h4{
   font-weight: lighter;

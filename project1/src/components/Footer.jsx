@@ -1,6 +1,6 @@
 
 const Footer = () => (
-  <footer className='center'>
+  <footer className='alignC'>
     <small>copyright &copy; 2024 MountKnow .</small>
     <a href="" className="logo">
     
@@ -11,7 +11,7 @@ const Footer = () => (
 </svg>
 <h4 className='alignC'>山知</h4></a>
 
-  </footer>
-)
+  <small>*此網站設計學生練習作品。若網站中有表單填寫，並無任何後台功能，不會對外蒐集個人資料。</small>
+    </footer>)
 
 export default Footer
