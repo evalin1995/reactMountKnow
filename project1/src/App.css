@@ -15,9 +15,6 @@
   --filter-primary2: rgba(51, 55, 44, .5);
   --filter-primary1: rgba(189, 111, 56, 0.5);
 
-
-  --skin: #FFD39A;
-
   --neutral1: #557C56;
   --neutral2: #A9A9A9;
   --neutral3: #D6E4E5;
@@ -255,6 +252,7 @@ a {
   flex-direction: column;
   align-items: center;
   overflow-y: hidden;
+  padding-bottom: 8px;
 }
 
 .card>*:not(img) {
@@ -287,7 +285,7 @@ a {
 .card .content>p {
   opacity: 0;
   transition: .2s ease;
-  padding-top: 24px;
+  padding-top: auto;
   color: #fff;
 }
 
@@ -324,7 +322,6 @@ a {
   padding: .2rem 16px;
   font-size: var(--font-size-l);
   transition: none;
-  margin-bottom: 8px;
   align-self: flex-end;
   margin-right: 24px;
 }
@@ -570,18 +567,17 @@ div.question {
 }
 
 .heading {
-  background-image: linear-gradient(transparent 16%,
-      #5dabb1 12%,
-      var(--neutral3) 24%,
-      var(--neutral3) 88%,
-      #c5e2e4 92%,
-      transparent 92%);
+background-color: var(--primary2);
+color:var(--neutral3);
 }
 
 .heading>span {
   color: var(--primary1);
+transition: .6s ease;
 }
-
+.banner:hover span{
+  transform: rotate(180deg);
+}
 button {
   border: none;
   padding: 8px 16px;
@@ -691,6 +687,9 @@ button {
   .quiz-box {
     width: auto;
     transform: none !important;
+  }
+  .quiz-box:nth-child(even){
+    transform: rotate(-5deg) !important;
   }
 }
 
@@ -809,15 +808,44 @@ button {
   flex: 5;
 }
 
+/* General Styles */
+
+
+/* Select input styling */
+#explore label {
+margin-top: 5%;
+}
+#explore select {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: var(--primary3-b); /* Slightly darker grey background */
+  border: 2px solid var(--primary2); /* Orange border */
+  border-radius: 5px;
+  color: var(--primary2); /* Dark grey text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 200px; /* Adjust width */
+  margin-bottom: 24px;
+}
+
+/* Option styling */
+#explore select option {
+  background-color: var(--select-bg); /* Matches select background */
+  color: var(--primary2); /* Dark grey text for better readability */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
 
 @media (max-width: 640px) {
 #nuT-wrap {
 background-size: 48%;
 }
-  #nuT-wrap li {
-    transform: none !important;
-  }
-
+ 
   #nuT-wrap li figure {
     width: 43% !important;
   }
@@ -858,8 +886,6 @@ background-size: 48%;
 /* 探索頁 */
 
 #explore {
-  /* background-image: url(../public/02-web-images0102/explore-bg1.png),    linear-gradient(var(--primary2-w)15%, var(--neutral1) 50%,
-      #fff 99%); */
       background-image: linear-gradient(
         var(--filter-primary1) 1%,
         var(--filter-primary1) 99%
@@ -872,6 +898,7 @@ background-size: 48%;
   width: 90%;
   justify-content: center;
   align-items: normal;
+  border-top: 8px groove var(--primary2);
 }
 
 .exPcard {
@@ -901,7 +928,6 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
 ;
 }
 .exPcard:hover h3{
-  background-image: none;
   color: var(--neutral3);
 }
 
@@ -932,11 +958,10 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
 .exPcard a>h3 {
   color: #fff;
   align-self: flex-end;
-  background-image: linear-gradient(transparent 35%,
-      rgba(20, 20, 20, .5)35%,
-      rgba(20, 20, 20, .5)80%,
-      transparent 80%);
-}
+  background-image: url(../public/02-web-images0102/explore-image/expTitle-bg.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: 50% 61%;}
 
 .exPcard div {
   flex: 3;
@@ -944,10 +969,13 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
   height: auto;
 }
 
-.exPcard img {
+.exPcard a>img {
   height: 100%;
   object-fit: cover;
   position: absolute;
+}
+.exPcard:nth-child(6n) a>img {
+bottom: 0;
 }
 
 .exPcard div>* {
@@ -1014,14 +1042,20 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
 }
 #explore>div {
 flex-direction: column;
-padding: 24px;
+align-self: center;
+width: 80%;
+margin-bottom: 2%;
+}
+#explore>div h3{
+  font-family: "Sora", "LXGW WenKai TC", serif;
 
 }
 #explore>div>div {
   border: 2px solid #fff;
 border-radius: 8px;
 padding: 16px;
-margin-top: auto;
+margin-top: 2%;
+margin-bottom: auto;
 }
 @media (max-width: 640px) {
   .banner {
@@ -1071,8 +1105,8 @@ align-self: flex-end;
     width: 70% !important;
     height: 350px;
     justify-content: space-evenly;
-    transform: none !important;
     margin-right: 0;
+    align-self: center;
   }
 
 }
