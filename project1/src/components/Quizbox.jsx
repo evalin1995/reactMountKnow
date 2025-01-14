@@ -87,7 +87,8 @@ export default function Quizbox() {
           <li key={index} className="quiz-box">
             {chunk.map((question, questionIndex) => (
               <div key={questionIndex} className="question">
-                <strong>問題 {index * chunkSize + questionIndex + 1}: <br /></strong> {question.question}
+                <strong>問題 {index * chunkSize + questionIndex + 1}: <br /></strong>
+                <h4>{question.question}</h4>
 
                 <ul style={{
                   display:'flex',

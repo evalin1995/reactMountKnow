@@ -4,11 +4,8 @@ import About from './About';
 import News from './News';
 import Quiz from './Quiz';
 import Home from './Home';
-const Footer=()=>(
-  <footer className='center'>
-<small>copyright &copy; 2024 MountKnow .</small>
-</footer>
-)
+import Footer from '../components/Footer';
+
 function Nutrition() {
 
 
@@ -53,9 +50,9 @@ function Nutrition() {
   return (
     <>
       <Navbar />
-      <div id="NuT-banner" className='banner justFC'>
+      <header id="NuT-banner" className='banner justFC'>
         <h1 className="heading center">Nutrit <span>i</span>on</h1>
-      </div>
+      </header>
       
       <ul id="nuT-wrap" className="center">
         {foodItems.map((item, index) => (

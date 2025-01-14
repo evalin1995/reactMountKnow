@@ -19,9 +19,9 @@ export default function Quiz() {
       {/* header#topbar>(a.logo>img)+nav.navigation>ul>(li>((a{Explore}>span{探索})+p))*5 */}
       <Navbar />
       <div >
-        <div id="quiz-banner" className='banner justFC'>
+        <header id="quiz-banner" className='banner justFC'>
           <h1 className="heading center">Qu <span>i</span>z</h1>
-        </div>
+        </header>
         <div className='wrapper alignC'>
           {/* 試卷區 */}
 

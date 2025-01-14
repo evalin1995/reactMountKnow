@@ -11,12 +11,11 @@
 
   --primary3-b: #B1C1C2;
   --neutral-b: #005c55;
+  --primary2-w: #656e56;
+  --filter-primary2: rgba(51, 55, 44, .5);
 
-  --primary2-w: #606C97;
-  --primary1-w: #FFF4E6;
 
   --skin: #FFD39A;
-  --moss: #E3EECD;
 
   --neutral1: #557C56;
   --neutral2: #A9A9A9;
@@ -44,6 +43,25 @@ body {
 
 h1 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+
+}
+
+h4 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
 }
 
 /* 選擇置中 */
@@ -112,15 +130,22 @@ h1 {
   color: #fff;
   padding: 5px;
 }
+
 @media (max-width:1023px) {
-  .navigation li p{
+  .navigation li p {
     display: none;
   }
 }
+
 footer {
   padding-top: 32px;
   background-color: var(--primary2);
   color: #fff;
+}
+
+footer img {
+  width: 50px;
+  height: auto;
 }
 
 /* 首頁 */
@@ -209,7 +234,7 @@ a {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .card>*:not(img) {
@@ -302,20 +327,24 @@ overflow-y: hidden;
   transform: scale(1.2);
   /* 左 */
 }
-.grid-r #row1 .card:nth-child(2)>img{
-top: -17%;
-left: 0;
-height: 120%;
+
+.grid-r #row1 .card:nth-child(2)>img {
+  top: -17%;
+  left: 0;
+  height: 120%;
 }
+
 .grid-r #row1 .card:nth-child(2):hover {
   background-color: var(--primary1);
   /* 右上-右-下 */
 }
-#row1>.card:first-child img{
+
+#row1>.card:first-child img {
   height: 113%;
   left: 0%;
   top: -10%;
 }
+
 #row1>.card:first-child:hover {
   background-color: var(--primary3-b);
   /* 右上-左 */
@@ -351,15 +380,22 @@ height: 120%;
   .grid-r>div {
     flex-direction: row-reverse;
   }
+  .card span>h5{
+  display: none;
+  }
+  .card span{
 
+  border: none;
+  }
 }
 
 @media (max-width:1023px) {
 
   #index-banner {
-    min-height: 94vh;
+    max-height: 94vh !important;
   }
-  .card .content>p{
+
+  .card .content>p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -370,24 +406,25 @@ height: 120%;
     text-align: justify;
 
   }
-  
 
-  .grid-r #row1 .card:nth-child(2) .content>p{
-    -webkit-line-clamp:2;
-    line-clamp:2;
+
+  .grid-r #row1 .card:nth-child(2) .content>p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
 
   }
-    #col2 .card:nth-child(1) .content>p{
-      -webkit-line-clamp:2;
-      line-clamp:2;
-  
-    }
-  }
 
-  @media (min-width:1024px) {
-    #index-banner {
-      padding: 0 16px;
-    } 
+  #col2 .card:nth-child(1) .content>p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+  }
+}
+
+@media (min-width:1024px) {
+  #index-banner {
+    padding: 0 16px;
+  }
 }
 
 /* 測驗頁 */
@@ -402,7 +439,6 @@ height: 120%;
 
 #quiz>p {
   padding-top: 5%;
-  width: 70%;
 }
 
 .quiz-box {
@@ -413,6 +449,7 @@ height: 120%;
   z-index: 99;
   width: 100%;
   margin-bottom: 24px;
+  padding: 0 16px;
 }
 
 #quiz:hover .quiz-box:nth-child(even) {
@@ -502,7 +539,11 @@ div.question {
   padding-bottom: 80px;
 
 }
-
+@media (max-width: 640px) {
+  .banner {
+  height: 35vh;
+  }
+}
 #quiz-banner {
   background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
   background-position: 50% 38%;
@@ -511,14 +552,16 @@ div.question {
 }
 
 .heading {
-  background-image: linear-gradient(transparent 30%,
-      var(--neutral3) 30%,
-      var(--neutral3) 80%,
-      transparent 80%);
+  background-image: linear-gradient(transparent 16%,
+      #5dabb1 12%,
+      var(--neutral3) 24%,
+      var(--neutral3) 88%,
+      #c5e2e4 92%,
+      transparent 92%);
 }
 
 .heading>span {
-  color: var(--neutral1);
+  color: var(--primary1);
 }
 
 button {
@@ -613,6 +656,33 @@ button {
   padding: 0 8px 8px;
 }
 
+@media (max-width: 640px) {
+  .wrapper {
+    overflow-x: hidden;
+  }
+
+  .wrapper p {
+    width: auto;
+  }
+
+  #quiz {
+    width: 77%;
+    align-items: normal;
+  }
+
+  .quiz-box {
+    width: auto;
+    transform: none !important;
+  }
+}
+
+@media (min-width:1024px) {
+  #quiz>p {
+
+    width: 70%;
+  }
+}
+
 /* 營養分頁 */
 #NuT-banner {
   background-image: url(../public/02-web-images0102/nutrition/nuTbg_jonas-allert-6oco8WCnABs-unsplash.jpg);
@@ -632,12 +702,13 @@ button {
 #nuT-wrap>li {
   width: 70%;
   margin: 3% 1% 0;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, .8);
   border: 5px var(--deep);
   border-style: dashed double;
   border-radius: 16px;
   padding: 1% 16px;
   transition: .5s ease-out;
+  backdrop-filter: blur(3px);
 }
 
 #nuT-wrap li>ul {
@@ -727,14 +798,20 @@ button {
   background-color: var(--primary2);
   color: #fff;
 }
+
 @media (max-width: 640px) {
-#nuT-wrap li{
-  transform: none !important;
+#nuT-wrap {
+background-size: 48%;
 }
-#nuT-wrap li figure{
-  width: 43% !important;
+  #nuT-wrap li {
+    transform: none !important;
+  }
+
+  #nuT-wrap li figure {
+    width: 43% !important;
+  }
 }
-}
+
 @media (max-width:1023px) {
   #nuT-wrap {
     flex-flow: column nowrap;
@@ -770,4 +847,194 @@ button {
     margin: 7% 200px;
 
   }
+}
+
+/* 探索頁 */
+.exPwrapper {
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+}
+
+.exPcard {
+  width: 24%;
+  height: 50vh;
+  flex-direction: column;
+  background-image:
+    linear-gradient(var(--filter-primary2) 1%, var(--filter-primary2) 99%),
+    url(../public/02-web-images0102/explore-image/exPcard-bg_5481060_2851714-01\ 1.svg);
+  background-size: cover;
+  margin-right: auto;
+  border-radius: 16px;
+  margin-top: 32px;
+  display: flex;
+}
+
+.exPcard:nth-child(odd) {
+  background-position: 70% 50%;
+
+}
+
+.exPcard:nth-child(even) {
+  background-position: 30% 100%;
+  background-size: 127%;
+
+}
+
+.exPcard a {
+  flex: 5;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.exPcard a>*:not(img) {
+  z-index: 99;
+  padding: 8px;
+}
+
+.exPcard a>h3 {
+  color: #fff;
+  align-self: flex-end;
+  background-image: linear-gradient(transparent 35%,
+      rgba(20, 20, 20, .5)35%,
+      rgba(20, 20, 20, .5)80%,
+      transparent 80%);
+}
+
+.exPcard div {
+  flex: 3;
+  padding: 8px;
+  height: auto;
+}
+
+.exPcard img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.exPcard div>* {
+  display: flex;
+}
+
+.exPcard div h4 {
+  align-items: flex-end;
+  white-space: nowrap;
+  color: var(--primary3);
+}
+
+.exPcard div h4>span {
+  height: auto;
+  width: -webkit-fill-available;
+  color: #fff;
+  margin-left: 6%;
+
+}
+
+.exPcard div h4:nth-child(1) {
+  background-color: var(--primary1);
+  display: inline-block;
+  color: #fff;
+  padding: .1rem 8px;
+  font-size: var(--font-size-s);
+}
+
+.exPcard div h4:nth-child(3) span {
+  margin-left: auto;
+}
+
+.exPcard div svg {
+  height: 24px;
+  width: auto;
+  color: var(--primary1);
+  margin-left: 2%;
+  margin-left: 0.5rem;
+  color: var(--primary3);
+  transition: .2s ease;
+}
+
+.exPcard div:hover svg {
+  transform: scale(.8);
+}
+
+.exPcard div p {
+  margin-top: 2%;
+
+  transition: .2s ease;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  text-align: justify;
+
+}
+
+.exPcard:hover div>p {
+  display: block;
+}
+
+#exP-banner {
+  background-image: url(../public/02-web-images0102/exPbanner_neom-UUPsAkA6jQA-unsplash.jpg);
+  background-position: 50% 77%;
+}
+
+#explore {
+  background-image: url(../public/02-web-images0102/explore-bg1.png),
+    linear-gradient(var(--primary2-w)15%,
+      var(--neutral1) 50%,
+      #fff 99%);
+  background-size: 118%;
+  background-position: 99% 0;
+  flex-direction: column;
+}
+
+#explore>h3.title {
+  font-family: "Fuzzy Bubbles", serif;
+  font-weight: 700;
+  font-size: var(--font-size-xxl);
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+  color: var(--primary2);
+  margin-top: 2%;
+  transform: rotate(-5deg);
+  align-self: flex-start;
+}
+
+section>h3:nth-child(1) img {
+  right: -39%;
+  bottom: 0;
+
+}
+
+#explore>.title img {
+  position: absolute;
+  height: 64%;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .exPcard {
+    width: 44% !important;
+    height: 350px;
+    justify-content: space-evenly;
+  }
+
+}
+
+@media (max-width:1023px) {
+  .exPcard {
+    width: 32%;
+    height: 400px !important;
+  }
+
+}
+
+@media (min-width:1024px) {
+  .exPcard div p {
+    display: none;
+  }
+  .exPcard {
+    width: 23%;
+  margin-right: 2%;}
 }

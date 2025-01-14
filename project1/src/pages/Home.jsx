@@ -55,7 +55,7 @@ import Navbar from "../components/Navbar";
                   <h3>{contents[1].title}</h3>
                   <p>{contents[1].disC}</p>
                 </div>
-                <span>詳細內容 <Entree /> </span>
+                <span><h5>詳細內容</h5> <Entree /> </span>
             </Link>
             <div className="col" id='col2'>
               <Link to={'/nutrition' || '#'} className='card' >
@@ -64,15 +64,15 @@ import Navbar from "../components/Navbar";
                     <h3>{contents[2].title}</h3>
                     <p>{contents[2].disC}</p>
                   </div>
-                  <span>詳細內容 <Entree /> </span>
+                  <span><h5>詳細內容</h5> <Entree /> </span>
               </Link>
-              <Link to={'/' || '#'} className='card' >
+              <Link to={'/explore' || '#'} className='card' >
                 <img className='bg' src={contents[3].imgUrl} alt="" />
                   <div className="content">
                     <h3>{contents[3].title}</h3>
                     <p>{contents[3].disC}</p>
                   </div>
-                  <span>詳細內容 <Entree /> </span>
+                  <span><h5>詳細內容</h5> <Entree /> </span>
               </Link>
             </div>
           </div>
@@ -83,7 +83,7 @@ import Navbar from "../components/Navbar";
                 <h3>{contents[4].title}</h3>
                 <p>{contents[4].disC}</p>
               </div>
-              <span>詳細內容<Entree /> </span>
+              <span><h5>詳細內容</h5><Entree /> </span>
           </Link>
         </div>
       </div>
