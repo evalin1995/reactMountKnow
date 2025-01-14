@@ -17,7 +17,6 @@ const trails = [
     duration: "1.5小時",
     description: "這條步道能讓你在短時間內登上象山，享受壯麗的臺北市區全景。",
     popIcons: 1  // Number of PopIcons to display
-
   },
   {
     name: "陽明山步道",
@@ -35,7 +34,6 @@ const trails = [
     duration: "2小時",
     description: "穿過迷人的老街，並享受眺望海景與山景的美好步道。",
     popIcons: 1
-
   },
   {
     name: "金山萬里步道",
@@ -71,7 +69,6 @@ const trails = [
     duration: "3小時",
     description: "雙溪步道沿著溪流而行，是一條適合放鬆的森林步道。",
     popIcons: 1
-
   },
   {
     name: "四獸山步道",
@@ -80,7 +77,6 @@ const trails = [
     duration: "2小時",
     description: "四獸山步道是另一條受歡迎的登山步道，提供臺北市的壯觀視野。",
     popIcons: 1
-
   },
   {
     name: "烏來步道",
@@ -89,17 +85,16 @@ const trails = [
     duration: "4小時",
     description: "烏來以原住民文化和溫泉著稱，這條步道能讓您穿越茂密的熱帶雨林。",
     popIcons: 1
-
   },
-  {
-    name: "十份步道",
-    imgUrl: "./02-web-images0102/explore-image/an_vision-tg6bXxR_XWE-unsplash.jpg",
-    location: "新北市",
-    duration: "3小時",
-    description: "十份的步道充滿歷史與文化，並且能欣賞到著名的天燈放飛場景。",
-    popIcons: 2
+  // {
+  //   name: "十份步道",
+  //   imgUrl: "./02-web-images0102/explore-image/an_vision-tg6bXxR_XWE-unsplash.jpg",
+  //   location: "新北市",
+  //   duration: "3小時",
+  //   description: "十份的步道充滿歷史與文化，並且能欣賞到著名的天燈放飛場景。",
+  //   popIcons: 2
 
-  },
+  // },
   {
     name: "東眼山步道",
     imgUrl: "./02-web-images0102/explore-image/alex-azabache-1BGo0goiiIE-unsplash.jpg",

@@ -13,6 +13,7 @@
   --neutral-b: #005c55;
   --primary2-w: #656e56;
   --filter-primary2: rgba(51, 55, 44, .5);
+  --filter-primary1: rgba(189, 111, 56, 0.5);
 
 
   --skin: #FFD39A;
@@ -855,10 +856,22 @@ background-size: 48%;
 }
 
 /* 探索頁 */
+
+#explore {
+  /* background-image: url(../public/02-web-images0102/explore-bg1.png),    linear-gradient(var(--primary2-w)15%, var(--neutral1) 50%,
+      #fff 99%); */
+      background-image: linear-gradient(
+        var(--filter-primary1) 1%,
+        var(--filter-primary1) 99%
+      ),url(../public/02-web-images0102/explorebg1.png);
+  /* background-position: 99% 0; */
+  flex-direction: column;
+}
 .exPwrapper {
   flex-flow: row wrap;
   width: 90%;
   justify-content: center;
+  align-items: normal;
 }
 
 .exPcard {
@@ -887,6 +900,10 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
 ;
 ;
 }
+.exPcard:hover h3{
+  background-image: none;
+  color: var(--neutral3);
+}
 
 .exPcard:nth-child(odd) {
   background-position: 70% 50%;
@@ -906,8 +923,7 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
   border-radius: 8px;
   overflow: hidden;
 }
-.exPcard a:hover{
-}
+
 .exPcard a>*:not(img) {
   z-index: 99;
   padding: 8px;
@@ -996,21 +1012,23 @@ box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
   background-image: url(../public/02-web-images0102/exPbanner_neom-UUPsAkA6jQA-unsplash.jpg);
   background-position: 50% 77%;
 }
+#explore>div {
+flex-direction: column;
+padding: 24px;
+
+}
+#explore>div>div {
+  border: 2px solid #fff;
+border-radius: 8px;
+padding: 16px;
+margin-top: auto;
+}
 @media (max-width: 640px) {
   .banner {
   height: 35vh !important;
   }}
 
 
-#explore {
-  background-image: url(../public/02-web-images0102/explore-bg1.png),
-    linear-gradient(var(--primary2-w)15%,
-      var(--neutral1) 50%,
-      #fff 99%);
-  background-size: 118%;
-  background-position: 99% 0;
-  flex-direction: column;
-}
 
 #explore>h3.title {
   font-family: "Fuzzy Bubbles", serif;
@@ -1039,9 +1057,9 @@ section>h3:nth-child(1) img {
 .upD-btn {
   font-size: var(--font-size-l);
   border-radius: 8px;
-  margin: 7% 0;
   background-color: var(--primary2);
   color: #fff;
+align-self: flex-end;
 }
 
 @media (max-width: 640px) {
