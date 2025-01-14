@@ -78,7 +78,6 @@ function Nutrition() {
             </div>
           </li>
         ))}
-        <button className="upD-btn">我要提供</button>
       </ul>
       {/* ul#nuT-wrap.center>(li.center>(h3>(figure>img)+(h4{便利程度}>span)*2{粽子})+div.content>lorem5)*5 */}
 <Footer/>

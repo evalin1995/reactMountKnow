@@ -93,26 +93,28 @@ p {
 }
 
 .logo>h4 {
-  flex-direction: column;
   font-weight: 600;
   color: var(--primary1);
+  width: 1.5rem;
 }
 
 #topbar>svg {
   width: 100%;
 }
 
+#topbar>.logo {
+  width: 64px;
+}
 .logo {
   display: flex;
-  width: 60px;
   font-family: "LXGW WenKai TC", serif;
-
 }
 
 /* 導覽列內容 */
 .navigation {
   display: flex;
   justify-content: space-around;
+  
 }
 
 /* 選單 */
@@ -142,16 +144,33 @@ footer {
   background-color: var(--primary2);
   color: #fff;
 }
+footer a{
+  cursor: default;
+}
+footer small{
+  margin-right: auto;
+  align-self: center;
+  width: auto;
+  display: inline-block;
+}
+.logo h4{
+  font-weight: lighter;
+margin-left: 8px;
+}
+footer div h4{
+  font-size: var(--font-size-m);
+}
 
-footer img {
-  width: 50px;
+footer svg {
+  width: 48px;
   height: auto;
+margin-left: auto;
 }
 
 /* 首頁 */
 #index-banner {
-  /* max-width: calc(121vh *1.62); */
-  min-height: calc((107vh *1.62 - 30px * 2) / 1.62);
+  max-width: calc(121vh *1.62);
+  /* min-height: calc((107vh *1.62 - 30px * 2) / 1.62); */
   height: 90vh;
 }
 
@@ -365,6 +384,9 @@ a {
 }
 
 @media (max-width: 640px) {
+  h3{
+    font-size: var(--font-size-l) !important;
+  }
   #index-banner {
     flex-direction: column-reverse;
   }
@@ -392,7 +414,7 @@ a {
 @media (max-width:1023px) {
 
   #index-banner {
-    max-height: 94vh !important;
+   height: 94vh !important;
   }
 
   .card .content>p {
@@ -539,14 +561,9 @@ div.question {
   padding-bottom: 80px;
 
 }
-@media (max-width: 640px) {
-  .banner {
-  height: 35vh;
-  }
-}
 #quiz-banner {
   background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
-  background-position: 50% 38%;
+  background-position: 50% 43%;
   z-index: 99;
   height: 52vh;
 }
@@ -791,13 +808,6 @@ button {
   flex: 5;
 }
 
-#nuT-wrap .upD-btn {
-  font-size: var(--font-size-l);
-  border-radius: 8px;
-  margin: 7% 0;
-  background-color: var(--primary2);
-  color: #fff;
-}
 
 @media (max-width: 640px) {
 #nuT-wrap {
@@ -842,16 +852,11 @@ background-size: 48%;
   #nuT-wrap>li {
     width: 38%;
   }
-
-  #nuT-wrap .upD-btn {
-    margin: 7% 200px;
-
-  }
 }
 
 /* 探索頁 */
 .exPwrapper {
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   width: 90%;
   justify-content: center;
 }
@@ -862,12 +867,25 @@ background-size: 48%;
   flex-direction: column;
   background-image:
     linear-gradient(var(--filter-primary2) 1%, var(--filter-primary2) 99%),
-    url(../public/02-web-images0102/explore-image/exPcard-bg_5481060_2851714-01\ 1.svg);
+    url(../public/02-web-images0102/explore-image/exPcard-bg_5481060_2851714-01.svg);
   background-size: cover;
   margin-right: auto;
   border-radius: 16px;
   margin-top: 32px;
   display: flex;
+  transition: .2s ease-out;
+}
+.exPcard:hover{
+  transform: 
+  skew(3deg, 5deg)
+  translate(0, -6%)
+
+   /* rotate3d(2, -1, -1, -0.2turn) */
+   ;
+   /* 當鼠標懸停在元素上時，水平傾斜 20 度，垂直傾斜 10 度。 */
+box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
+;
+;
 }
 
 .exPcard:nth-child(odd) {
@@ -888,7 +906,8 @@ background-size: 48%;
   border-radius: 8px;
   overflow: hidden;
 }
-
+.exPcard a:hover{
+}
 .exPcard a>*:not(img) {
   z-index: 99;
   padding: 8px;
@@ -977,6 +996,11 @@ background-size: 48%;
   background-image: url(../public/02-web-images0102/exPbanner_neom-UUPsAkA6jQA-unsplash.jpg);
   background-position: 50% 77%;
 }
+@media (max-width: 640px) {
+  .banner {
+  height: 35vh !important;
+  }}
+
 
 #explore {
   background-image: url(../public/02-web-images0102/explore-bg1.png),
@@ -1012,12 +1036,25 @@ section>h3:nth-child(1) img {
   height: 64%;
   width: auto;
 }
+.upD-btn {
+  font-size: var(--font-size-l);
+  border-radius: 8px;
+  margin: 7% 0;
+  background-color: var(--primary2);
+  color: #fff;
+}
 
 @media (max-width: 640px) {
+.exPwrapper {
+
+    flex-flow: column nowrap;
+  }
   .exPcard {
-    width: 44% !important;
+    width: 70% !important;
     height: 350px;
     justify-content: space-evenly;
+    transform: none !important;
+    margin-right: 0;
   }
 
 }
