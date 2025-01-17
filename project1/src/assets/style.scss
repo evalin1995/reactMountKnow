@@ -1,50 +1,582 @@
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=LXGW+WenKai+TC&family=Sora:wght@100..800&display=swap');
+
 /* 清除預設 */
 #root {
-    width: 100%;
-    padding: 0;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      
-    }
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
-    li,ol, ul {
-        list-style: none;
-    }
-    a{
-      text-decoration: none;
-    }
-    img{
-        width: 100%;
-      }
-      
+  width: 100%;
+  padding: 0;
+}
+
 /* vite預設 */
 #root {
   margin: 0 auto;
-  padding: 2rem;
+  // padding: 2rem;
   /* text-align: center; */
 }
 
-
 .read-the-docs {
   color: #888;
+}
+
+/* 統一設定class*/
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignC {
+  display: flex;
+  align-items: center;
+}
+
+.justFC {
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    font-size: var(--font-size-l) !important;
+  }
+}
+
+body {
+  font-family: "Sora", "Chocolate Classical Sans";
+  color: var(--text);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+
+}
+
+h4 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
+}
+button {
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {}
+
+/* 統一設定class結束*/
+
+/* 首頁開始 */
+#index-banner {
+  max-width: calc(121vh *1.62);
+  /* min-height: calc((107vh *1.62 - 30px * 2) / 1.62); */
+  height: 90vh;
+
+  >div,
+  a {
+    display: flex;
+  }
+
+  .card {
+    height: auto;
+    transition: .8s ease;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+
+    >*:not(img) {
+      z-index: 99;
+    }
+
+    &:not(#grid-l):hover .bg {
+      opacity: 0.2;
+    }
+
+    .bg {
+      position: absolute;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      padding: 0 16px;
+
+      >h3 {
+        font-size: 1.8rem;
+      }
+
+      >p {
+        opacity: 0;
+        transition: .2s ease;
+        padding-top: auto;
+        color: #fff;
+
+      }
+    }
+
+    span {
+      border: 2px solid #fff;
+      display: flex;
+      color: #fff;
+      padding: .2rem 16px;
+      font-size: var(--font-size-l);
+      transition: none;
+      align-self: flex-end;
+      margin-right: 24px;
+    }
+
+    svg {
+      height: 24px;
+      width: auto;
+      align-self: flex-end;
+      margin-left: 8px;
+      transition: .4s ease;
+      fill: #fff;
+
+    }
+
+    &:hover {
+      .content>p {
+        opacity: 1;
+      }
+    }
+  }
+
+  #grid-l {
+    height: 100%;
+    flex: 3;
+    height: 100%;
+    flex: 3;
+    cursor: w-resize;
+    overflow: hidden;
+    font-size: var(--font-size-l);
+    font-family: "LXGW WenKai TC", serif;
+
+    .content {
+      text-align: center;
+      padding: 32px;
+      padding-top: 5rem;
+
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .grid-r {
+
+    flex: 5;
+
+    height: 100%;
+    flex-direction: column;
+
+    >div,
+    a {
+      display: flex;
+    }
+
+    #row1 {
+      flex: 5;
+
+      .card {
+        &:nth-child(2):hover {
+          background-color: var(--primary1);
+          /* 右上-右-下 */
+        }
+
+        &:nth-child(2)>img {
+          top: -17%;
+          left: 0;
+          height: 120%;
+        }
+      }
+
+      >.card {
+        &:first-child {
+          img {
+            height: 113%;
+            left: 0%;
+            top: -10%;
+          }
+
+          &:hover {
+            background-color: var(--primary3-b);
+            /* 右上-左 */
+
+          }
+        }
+      }
+
+      #col1 {
+        flex: 3;
+
+        justify-content: space-around;
+
+        &.card:hover {
+          .content>* {
+
+            color: var(--text);
+          }
+
+          span {
+
+            color: var(--deep);
+            border: 2px solid var(--deep);
+          }
+        }
+      }
+
+      #col2 {
+        display: flex;
+
+        flex: 5;
+        flex-direction: column;
+
+        .card {
+          &:nth-child(odd) {
+            flex: 5;
+            background-color: var(--neutral1);
+            /* 右上-右-上 */
+
+          }
+
+          &:nth-child(even) {
+            flex: 3;
+          }
+        }
+      }
+    }
+
+  }
+
+  #row2 {
+    flex: 2;
+    background-size: 30%;
+    font-family: "LXGW WenKai TC", serif;
+    flex-direction: row;
+    background-image:
+      linear-gradient(rgba(111, 128, 129, 0.8) 0,
+        rgba(111, 128, 129, 0.9) 99%),
+      url(../public/02-web-images0102/banner-bottom.png);
+    backdrop-filter: blur(5px);
+    background-color: var(--primary3-b);
+  }
+}
+
+@media (max-width: 640px) {
+  #index-banner {
+    flex-direction: column-reverse;
+
+    .card {
+      span {
+        border: none;
+
+      }
+
+      h5 {
+        display: none;
+      }
+    }
+
+    #grid-l {
+      width: 100%;
+
+      .content {
+        padding-top: 7%;
+      }
+    }
+
+    .grid-r {
+      >div {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+}
+
+@media (max-width:1023px) {
+  #index-banner {
+    height: 94vh !important;
+
+    .card {
+      .content>p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        display: box;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        /*行數於區塊中設定-webkit-line-clamp: ;*/
+        text-align: justify;
+      }
+    }
+
+    .grid-r {
+      #row1 {
+        .card {
+          &:nth-child(2) .content>p {
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+
+          }
+        }
+
+        #col2 {
+          .card {
+            &:nth-child(1) .content>p {
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width:1024px) {
+  #index-banner {
+    padding: 0 16px;
+  }
+}
+
+/*首頁結束*/
+/*導覽列開始*/
+.logo {
+  width: 64px;
+  font-family: "LXGW WenKai TC", serif;
+
+  h4 {
+    font-weight: 600;
+    color: var(--primary1);
+    width: 1.5rem;
+  }
+}
+
+#topbar {
+  justify-content: space-between;
+  background-color: var(--primary2);
+  opacity: .8;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 16px;
+
+  >* {
+    display: flex;
+
+  }
+
+  .navigation {
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 7%;
+
+    ul {
+      display: flex;
+      width: 100%;
+      border: 2px solid gold;
+
+      li {
+        display: flex;
+
+        transition: .4s;
+        margin-right: auto;
+
+        >* {
+          color: #fff;
+          // padding: 5px;
+
+        }
+      }
+    }
+  }
+
+
+
+  svg {
+    width: 100%;
+  }
+}
+
+#index-page {
+  #topbar {
+    position: inherit;
+  }
+}
+
+@media (max-width:1023px) {
+  .navigation p {
+    display: none;
+  }
+}
+
+// 頁尾曲開始
+footer {
+  background-color: var(--primary2);
+  color: #fff;
+  position: relative;
+
+  a.logo {
+    cursor: default;
+
+    h4 {
+      font-weight: lighter;
+      margin-left: 8px;
+
+    }
+  }
+
+  small {
+    &:last-child {
+      position: absolute;
+      font-size: var(--font-size-xs);
+      width: 33%;
+      bottom: 1%;
+      color: var(--neutral2);
+      opacity: .5;
+    }
+  }
+
+  div {
+    h4 {
+      font-size: var(--font-size-m);
+
+    }
+  }
+}
+
+/*頁尾曲結束*/
+/* 測驗頁開始 */
+.banner {
+  background-size: cover;
+  height: 43vh;
+  align-items: flex-end;
+  padding-bottom: 80px;
+
+  &#quiz-banner {
+    background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
+    background-position: 50% 43%;
+    z-index: 99;
+    height: 52vh;
+  }
+
+  .heading {
+    background-color: var(--primary2);
+    color: var(--neutral3);
+
+    span {
+      color: var(--primary1);
+      transition: .6s ease;
+    }
+  }
+  &:hover{
+    span {
+    rotate: 180deg;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  flex-direction: column;
+  padding: 0 2%;
+  background-image: linear-gradient(rgba(169, 169, 169, .7) 1%,
+      rgba(169, 169, 169, .7) 99%),
+    url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
+
+  #quiz {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+
+    >p {
+      padding-top: 5%;
+    }
+
+    .quiz-box {
+      background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+      background-size: cover;
+      margin: 24px 0 6%;
+      padding: 0 16px;
+      transition: .5s ease-in;
+      z-index: 99;
+
+      &:nth-child(even) {
+        background-position: 50% 20%;
+      }
+
+      div.question {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        ul {
+          li {
+            white-space: nowrap;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+    button {
+      background-color: var(--primary2);
+      color: #fff;
+      padding: .5rem 1rem;
+      border-radius: 8px;
+      margin-left: 6%;
+      white-space: nowrap;
+    }
+  }
+
+  svg.quiz-bg {
+    position: absolute;
+    /* 利用wrapper的外層定位 */
+
+    width: 30%;
+    color: #fff;
+    /* 定義svg檔色彩 */
+    z-index: -1;
+
+    &:nth-child(odd) {
+      top: 3%;
+      left: 9%;
+    }
+
+    &:nth-child(even) {
+      bottom: 16%;
+      right: 3%;
+    }
+
+    &:nth-child(3) {
+      top: 58%;
+      right: 19%;
+    }
+  }
+
 }

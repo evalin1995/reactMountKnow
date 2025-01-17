@@ -36,7 +36,7 @@ import Navbar from "../components/Navbar";
   function Home() {
 
   return (
-    <>
+    <div id="index-page">
           <Navbar />
       <div className='alignC' id='index-banner'>
         <Link className="card" id='grid-l' >
@@ -99,7 +99,7 @@ import Navbar from "../components/Navbar";
 
 
 
-    </>
+    </div>
   )
 }
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=LXGW+WenKai+TC&family=Sora:wght@100..800&display=swap');
 
 
 
@@ -33,29 +34,479 @@
 
 }
 
+body {
+  font-family: "Sora", "Chocolate Classical Sans";
+  color: var(--text);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+
+}
+
+h4 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
+}
+
+/* 選擇置中 */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignC {
+  display: flex;
+  align-items: center;
+}
+
+.justFC {
+  display: flex;
+  justify-content: center;
+}
+
+#topbar {
+  justify-content: space-between;
+  background-color: var(--primary2);
+  opacity: .8;
+  padding: 0 16px;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  z-index: 999;
+}
+
+.logo>h4 {
+  font-weight: 600;
+  color: var(--primary1);
+  width: 1.5rem;
+}
+
+#topbar>svg {
+  width: 100%;
+}
+
+#topbar>.logo {
+  width: 64px;
+}
+.logo {
+  display: flex;
+  font-family: "LXGW WenKai TC", serif;
+}
+
+/* 導覽列開始 */
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.navigation>ul {
+  display: flex;
+  width: 100%;
+}
+
+.navigation>ul>li {
+  display: flex;
+  transition: .4s;
+}
+
+.navigation>ul>li>* {
+  color: #fff;
+  padding: 5px;
+}
+
+@media (max-width:1023px) {
+  .navigation li p {
+    display: none;
+  }
+}
+
+footer {
+  padding-top: 32px;
+  background-color: var(--primary2);
+  color: #fff;
+  position: relative;
+}
+footer a{
+  cursor: default;
+}
+footer small:nth-child(1){
+  align-self: center;
+  margin: 0 auto;
+}
+  footer>small:last-child{
+  position: absolute;
+  font-size: var(--font-size-xs);
+  width: 33%;
+  bottom: 1%;
+  color: var(--neutral2);
+  opacity: .8;
+}
+.logo h4{
+  font-weight: lighter;
+margin-left: 8px;
+}
+footer div h4{
+  font-size: var(--font-size-m);
+}
+
+footer svg {
+  width: 48px;
+  height: auto;
+margin-left: auto;
+}
+
+/* 首頁 */
+#index-banner {
+  max-width: calc(121vh *1.62);
+  /* min-height: calc((107vh *1.62 - 30px * 2) / 1.62); */
+  height: 90vh;
+}
+
+#grid-l {
+  height: 100%;
+  flex: 3;
+}
+
+.grid-r {
+  flex: 5;
+
+  height: 100%;
+}
+
+.grid-r,
+#col2 {
+
+  display: flex;
+
+}
+
+.grid-r,
+.col {
+  flex-direction: column;
+}
+
+.grid-r>div,
+a {
+  display: flex;
+}
+
+#row1 {
+  flex: 5;
+}
+
+#col2 {
+  flex: 5;
+
+}
+
+#row2 {
+  flex: 2;
+}
+
+#col2 .card:nth-child(odd) {
+  flex: 5;
+}
+
+#col2 .card:nth-child(even) {
+  flex: 3;
+}
+
+#col1 {
+  flex: 3;
+
+  justify-content: space-around;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 0 16px;
+}
+
+.content>h3 {
+  font-size: 1.8rem;
+}
+
+#grid-l .content {
+  text-align: center;
+  padding: 32px;
+}
+
+.card {
+  height: auto;
+  transition: .8s ease;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+}
+
+.card>*:not(img) {
+  z-index: 99;
+}
+
+.card:not(#grid-l):hover .bg {
+  opacity: 0.2;
+}
+
+.card .bg {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+}
+
+#index-banner>.card:nth-child(1) {
+  cursor: w-resize;
+}
+
+.card svg {
+  height: 24px;
+  width: auto;
+  align-self: flex-end;
+  margin-left: 8px;
+  transition: .4s ease;
+  fill: #fff;
+}
+
+.card .content>p {
+  opacity: 0;
+  transition: .2s ease;
+  padding-top: auto;
+  color: #fff;
+}
+
+.card:hover .content>p {
+  opacity: 1;
+}
+
+.grid-r .card#col1:hover .content>* {
+
+  color: var(--text);
+}
+
+.grid-r .card#col1:hover span {
+
+  color: var(--deep);
+  border: 2px solid var(--deep);
+}
+
+.card span:hover svg {
+  transform: rotate(180deg);
+}
+
+#row2 {
+  background-size: 30%;
+  font-family: "LXGW WenKai TC", serif;
+  flex-direction: row;
+}
 
 
+.card span {
+  border: 2px solid #fff;
+  display: flex;
+  color: #fff;
+  padding: .2rem 16px;
+  font-size: var(--font-size-l);
+  transition: none;
+  align-self: flex-end;
+  margin-right: 24px;
+}
+
+#grid-l {
+  overflow: hidden;
+  font-size: var(--font-size-l);
+  font-family: "LXGW WenKai TC", serif;
+}
+
+#grid-l .content {
+  padding-top: 5rem;
+}
+
+#grid-l:hover img {
+  transition: .6s ease-in-out;
+}
+
+#grid-l:hover img {
+  transform: scale(1.2);
+  /* 左 */
+}
+
+.grid-r #row1 .card:nth-child(2)>img {
+  top: -17%;
+  left: 0;
+  height: 120%;
+}
+
+.grid-r #row1 .card:nth-child(2):hover {
+  background-color: var(--primary1);
+  /* 右上-右-下 */
+}
+
+#row1>.card:first-child img {
+  height: 113%;
+  left: 0%;
+  top: -10%;
+}
+
+#row1>.card:first-child:hover {
+  background-color: var(--primary3-b);
+  /* 右上-左 */
+}
+
+#col2 .card:nth-child(1):hover {
+  background-color: var(--neutral1);
+  /* 右上-右-上 */
+}
+
+#row2 {
+  background-image:
+    linear-gradient(rgba(111, 128, 129, 0.8) 0,
+      rgba(111, 128, 129, 0.9) 99%),
+    url(../public/02-web-images0102/banner-bottom.png);
+  backdrop-filter: blur(5px);
+  background-color: var(--primary3-b);
+}
+
+@media (max-width: 640px) {
+  h3{
+    font-size: var(--font-size-l) !important;
+  }
+  #index-banner {
+    flex-direction: column-reverse;
+  }
+
+  #grid-l {
+    width: 100%;
+  }
+
+  #grid-l .content {
+    padding-top: 7%;
+  }
+
+  .grid-r>div {
+    flex-direction: row-reverse;
+  }
+  .card span>h5{
+  display: none;
+  }
+  .card span{
+
+  border: none;
+  }
+}
+
+@media (max-width:1023px) {
+
+  #index-banner {
+   height: 94vh !important;
+  }
+
+  .card .content>p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    /*行數於區塊中設定-webkit-line-clamp: ;*/
+    text-align: justify;
+
+  }
+
+
+  .grid-r #row1 .card:nth-child(2) .content>p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+  }
+
+  #col2 .card:nth-child(1) .content>p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+  }
+}
+
+@media (min-width:1024px) {
+  #index-banner {
+    padding: 0 16px;
+  }
+}
 /* 首頁結束 */
 /* 測驗頁 */
 #quiz {
   width: 67%;
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 60px;
   /* 防止內容被切到 */
 }
 
-
-.quiz-box {
-  margin-top: 6%;
-  width: 100%;
+#quiz>p {
+  padding-top: 5%;
 }
 
+.quiz-box {
+  background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+  background-size: cover;
+  margin-top: 6%;
+  transition: .5s ease-in;
+  z-index: 99;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+#quiz:hover .quiz-box:nth-child(even) {
+  transform: none;
+}
+
+.quiz-box:nth-child(even) {
+  background-position: 50% 20%;
+}
+
+.quiz-box:nth-child(odd) {
+  transform: rotate(5deg);
+}
+
+.quiz-box:nth-child(odd):hover {
+  transform: none;
+}
+
+.quiz-box:nth-child(even) {
+  transform: rotate(-10deg);
+}
 
 .quiz-box:last-child {
   margin-left: 24px;
 }
 
-
+div.question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .bg-quiz {
   width: 200px;
@@ -63,17 +514,90 @@
 
 /* 測驗頁 */
 .wrapper {
+  position: relative;
+  flex-direction: column;
+  padding: 0 2%;
+  background-image: linear-gradient(rgba(169, 169, 169, .7) 1%,
+      rgba(169, 169, 169, .7) 99%),
+    url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
   background-size: 60%;
 }
 
+.wrapper svg {
+  position: absolute;
+  /* 利用wrapper的外層定位 */
+
+  width: 30%;
+  color: #fff;
+  /* 定義svg檔色彩 */
+}
+
+.quiz-bg:nth-child(odd) {
+  top: 3%;
+  left: 9%;
+}
+
+.quiz-bg:nth-child(even) {
+  top: 6%;
+  right: 3%;
+}
+
+.quiz-bg:last-child {
+  top: 58%;
+  right: 19%;
+  transform: rotate(90deg);
+}
 
 .question>ul {
   width: 100%;
   flex-wrap: wrap;
 }
 
+.question>ul>li {
+  white-space: nowrap;
+  margin: 0 10px;
+}
 
+.banner {
+  background-size: cover;
+  height: 43vh;
+  align-items: flex-end;
+  padding-bottom: 80px;
 
+}
+#quiz-banner {
+  background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
+  background-position: 50% 43%;
+  z-index: 99;
+  height: 52vh;
+}
+
+.heading {
+background-color: var(--primary2);
+color:var(--neutral3);
+}
+
+.heading>span {
+  color: var(--primary1);
+transition: .6s ease;
+}
+.banner:hover span{
+  transform: rotate(180deg);
+}
+button {
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#quiz button {
+  background-color: var(--primary2);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  margin-left: 6%;
+  white-space: nowrap;
+}
 
 #quiz>div:last-child {
   margin-top: 6%;
@@ -170,7 +694,9 @@
     width: auto;
     transform: none !important;
   }
-
+  .quiz-box:nth-child(even){
+    transform: rotate(-5deg) !important;
+  }
 }
 
 @media (min-width:1024px) {
@@ -242,10 +768,17 @@
   object-fit: cover;
 }
 
+#nuT-wrap>li:nth-child(2n) {
+  transform: rotate(-8deg);
+}
 
 #nuT-wrap>li:nth-child(odd) {
   transform: translate(0, -6%);
   ;
+}
+
+#nuT-wrap>li:nth-child(3n-1) {
+  transform: rotate(5deg);
 }
 
 #nuT-wrap>li:hover {
@@ -393,6 +926,7 @@ background-size: 48%;
   skew(3deg, 5deg)
   translate(0, -6%)
 
+   /* rotate3d(2, -1, -1, -0.2turn) */
    ;
    /* 當鼠標懸停在元素上時，水平傾斜 20 度，垂直傾斜 10 度。 */
 box-shadow: -2em 1.5em 0 -0.7em    rgba(51, 55, 44, .4);
@@ -545,6 +1079,7 @@ margin-bottom: auto;
   margin-left: 5%;
   color: var(--primary2);
   margin-top: 2%;
+  transform: rotate(-5deg);
   align-self: flex-start;
 }
 
