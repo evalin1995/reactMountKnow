@@ -261,7 +261,7 @@ p {
           span {
 
             color: $deep;
-            border: 2px solid $deep;
+            border: 2px solid var(--deep);
           }
         }
       }
@@ -297,7 +297,7 @@ p {
     background-image:
       linear-gradient(rgba(111, 128, 129, 0.8) 0,
         rgba(111, 128, 129, 0.9) 99%),
-      url(..//public/02-web-images0102/banner-bottom.png);
+      url(../02-web-images0102/banner-bottom.png);
     backdrop-filter: blur(5px);
     background-color: $primary3-b;
   }
@@ -474,7 +474,7 @@ footer {
   small {
     &:last-child {
       position: absolute;
-      font-size: $font-size-xs;
+      font-size: var(--font-size-xs);
       width: 33%;
       bottom: 1%;
       color: $neutral2;
@@ -484,7 +484,7 @@ footer {
 
   div {
     h4 {
-      font-size: $font-size-m;
+      font-size: var(--font-size-m);
 
     }
   }
@@ -499,10 +499,10 @@ footer {
   padding-bottom: 4%;
 
   &#quiz-banner {
-    background-image: url(..//public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
+    background-image: url(../02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
     background-position: 50% 43%;
     z-index: 99;
-    background-image: url(..//public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+    background-image: url(../02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
 
   }
 
@@ -512,7 +512,7 @@ footer {
   }
 
   &#NuT-banner {
-    background-image: url(..//public/02-web-images0102/nutrition/nutrition-bg.png),
+    background-image: url(../02-web-images0102/nutrition/nutrition-bg.png),
       linear-gradient(to top, #feada6 0%, #f5efef 100%);
     background-size: 50%;
     background-position: 50% 70%;
@@ -541,7 +541,7 @@ footer {
   padding: 0 1%;
   background-image: linear-gradient(rgba(169, 169, 169, .7) 1%,
       rgba(169, 169, 169, .7) 99%),
-    url(..//public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
+    url(../02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
 
   #quiz {
     display: flex;
@@ -602,7 +602,7 @@ footer {
               /* 單選框的寬度 */
               height: 1rem;
               /* 單選框的高度 */
-              border: 2px solid $deep;
+              border: 2px solid var(--deep);
               /* 灰色邊框 */
               border-radius: 4px;
               /* 長方形的邊角（非圓形） */
@@ -992,7 +992,7 @@ footer {
   flex-flow: row wrap;
   align-items: normal;
   padding: 0 7%;
-  // background-color: $neutral3;
+  background-color: $neutral3;
 
   >li {
     border: 2px $deep;

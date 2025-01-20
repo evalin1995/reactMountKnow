@@ -265,7 +265,7 @@ p {
 }
 #index-banner .grid-r #row1 #col1.card:hover span {
   color: #686664;
-  border: 2px solid #686664;
+  border: 2px solid var(--deep);
 }
 #index-banner .grid-r #row1 #col2 {
   display: flex;
@@ -285,7 +285,7 @@ p {
   background-size: 60%;
   font-family: "LXGW WenKai TC", serif;
   flex-direction: row;
-  background-image: linear-gradient(rgba(111, 128, 129, 0.8) 0, rgba(111, 128, 129, 0.9) 99%), url(..//public/02-web-images0102/banner-bottom.png);
+  background-image: linear-gradient(rgba(111, 128, 129, 0.8) 0, rgba(111, 128, 129, 0.9) 99%), url(../02-web-images0102/banner-bottom.png);
   backdrop-filter: blur(5px);
   background-color: #B1C1C2;
 }
@@ -408,14 +408,14 @@ footer a.logo h4 {
 }
 footer small:last-child {
   position: absolute;
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
   width: 33%;
   bottom: 1%;
   color: #A9A9A9;
   opacity: 0.5;
 }
 footer div h4 {
-  font-size: 1rem;
+  font-size: var(--font-size-m);
 }
 
 /*頁尾曲結束*/
@@ -426,17 +426,17 @@ footer div h4 {
   padding-bottom: 4%;
 }
 .banner#quiz-banner {
-  background-image: url(..//public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
+  background-image: url(../02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
   background-position: 50% 43%;
   z-index: 99;
-  background-image: url(..//public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+  background-image: url(../02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
 }
 .banner#exP-banner {
   background-image: url(./public/02-web-images0102/explore-image/exPcard-bg_5481060_2851714-01.svg);
   background-size: 50%;
 }
 .banner#NuT-banner {
-  background-image: url(..//public/02-web-images0102/nutrition/nutrition-bg.png), linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  background-image: url(../02-web-images0102/nutrition/nutrition-bg.png), linear-gradient(to top, #feada6 0%, #f5efef 100%);
   background-size: 50%;
   background-position: 50% 70%;
 }
@@ -456,7 +456,7 @@ footer div h4 {
   position: relative;
   flex-direction: column;
   padding: 0 1%;
-  background-image: linear-gradient(rgba(169, 169, 169, 0.7) 1%, rgba(169, 169, 169, 0.7) 99%), url(..//public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
+  background-image: linear-gradient(rgba(169, 169, 169, 0.7) 1%, rgba(169, 169, 169, 0.7) 99%), url(../02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
 }
 .wrapper #quiz {
   display: flex;
@@ -513,7 +513,7 @@ footer div h4 {
   /* 單選框的寬度 */
   height: 1rem;
   /* 單選框的高度 */
-  border: 2px solid #686664;
+  border: 2px solid var(--deep);
   /* 灰色邊框 */
   border-radius: 4px;
   /* 長方形的邊角（非圓形） */
@@ -816,6 +816,7 @@ footer div h4 {
   flex-flow: row wrap;
   align-items: normal;
   padding: 0 7%;
+  background-color: #D6E4E5;
 }
 #nuT-wrap > li {
   border: 2px #686664;
