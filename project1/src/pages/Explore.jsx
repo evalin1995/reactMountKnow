@@ -25,20 +25,26 @@ function Explore() {
         <h1 className="heading center">Expl<span>o</span>re</h1>
       </header>
       <section id='explore' className='alignC'>
-        
+
+
+<img src="./02-web-images0102/valadzionak_volha3.png" className='exP-dec' alt="" />
+<img src="./02-web-images0102/valadzionak_volha2.png" className='exP-dec' alt="" />
+<img src="./02-web-images0102/valadzionak_volha1.png" className='exP-dec' alt="" />
         <Expbox />
-        <h3 className='title'>More
-          <img src="./02-web-images0102/exPtitle.png" alt="" />
-        </h3>
-        <div className='alignC'>
-          {trailInfo.map((info, index) => (
-            <div key={index} className="trail-info">
-              <h3>{info.title}</h3>
-              <p>{info.description}</p>
-            </div>
-          ))}
-        </div>
+
       </section>
+<section id="exP-end" className='alignC'>
+      <h3 className='title'>More
+        <img src="./02-web-images0102/exPtitle.png" alt="" />
+      </h3>
+      <div className='alignC'>
+        {trailInfo.map((info, index) => (
+          <div key={index} className="trail-info">
+            <h3>{info.title}</h3>
+            <p>{info.description}</p>
+          </div>
+        ))}
+      </div></section>
       <Footer />
 
     </>

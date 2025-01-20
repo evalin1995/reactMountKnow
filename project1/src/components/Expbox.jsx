@@ -165,69 +165,69 @@ const trails = [
     popIcons: 2,
     height: 1810  // Height in meters
   }
-,{
-  name: "大湖山步道",
-  imgUrl: "./02-web-images0102/explore-image/21_lucas-chizzali-IkOJFO65FWc-unsplash.jpg",
-  location: "桃園市",
-  duration: "4.5小時",
-  description: "大湖山步道提供壯麗的山脈景觀，並可遠足至大湖山頂，眺望周圍美景。",
-  popIcons: 2,
-  height: 1300
-},
-{
-  name: "大安山步道",
-  imgUrl: "./02-web-images0102/explore-image/22_ethan-chan-yyFqdW3_Zc8-unsplash.jpg",
-  location: "新北市",
-  duration: "3小時",
-  description: "這條步道通過原始森林，並提供壯觀的山景和都市全景。",
-  popIcons: 2,
-  height: 800
-},
-{
-  name: "龍岡步道",
-  imgUrl: "./02-web-images0102/explore-image/23_muhammad-azzam-jrydV4LC6kQ-unsplash.jpg",
-  location: "新竹市",
-  duration: "2小時",
-  description: "沿著溪流的步道，有著優美的自然景觀，適合家庭出遊。",
-  popIcons: 1,
-  height: 400
-},
-{
-  name: "四季山步道",
-  imgUrl: "./02-web-images0102/explore-image/12_an_vision-tg6bXxR_XWE-unsplash.jpg",
-  location: "宜蘭縣",
-  duration: "6小時",
-  description: "四季山步道四季皆可享受，春夏秋冬皆有不同風景。",
-  popIcons: 3,
-  height: 1500
-},
-{
-  name: "雙溪步道",
-  imgUrl: "./02-web-images0102/explore-image/11_jeff-ma-9x6PQOcPvYk-unsplash.jpg",
-  location: "新北市",
-  duration: "2小時",
-  description: "雙溪步道沿著溪流而行，景色宜人，適合放鬆心情。",
-  popIcons: 1,
-  height: 300
-},
-{
-  name: "富貴角步道",
-  imgUrl: "./02-web-images0102/explore-image/24_yehyunxiang-PBpInGcIYXo-unsplash.jpg",
-  location: "新北市",
-  duration: "3.5小時",
-  description: "富貴角步道是觀賞北海岸壯麗景觀的好地方，尤其在日落時分。",
-  popIcons: 2,
-  height: 600
-},
-{
-  name: "東部海岸步道",
-  imgUrl: "./02-web-images0102/explore-image/25_angela-lo-VJcsDjJuPcc-unsplash.jpg",
-  location: "花蓮縣",
-  duration: "5小時",
-  description: "東部海岸步道提供壯麗的海景，適合喜愛自然和海邊的登山者。",
-  popIcons: 3,
-  height: 1000
-}
+  , {
+    name: "大湖山步道",
+    imgUrl: "./02-web-images0102/explore-image/21_lucas-chizzali-IkOJFO65FWc-unsplash.jpg",
+    location: "桃園市",
+    duration: "4.5小時",
+    description: "大湖山步道提供壯麗的山脈景觀，並可遠足至大湖山頂，眺望周圍美景。",
+    popIcons: 2,
+    height: 1300
+  },
+  {
+    name: "大安山步道",
+    imgUrl: "./02-web-images0102/explore-image/22_ethan-chan-yyFqdW3_Zc8-unsplash.jpg",
+    location: "新北市",
+    duration: "3小時",
+    description: "這條步道通過原始森林，並提供壯觀的山景和都市全景。",
+    popIcons: 2,
+    height: 800
+  },
+  {
+    name: "龍岡步道",
+    imgUrl: "./02-web-images0102/explore-image/23_muhammad-azzam-jrydV4LC6kQ-unsplash.jpg",
+    location: "新竹市",
+    duration: "2小時",
+    description: "沿著溪流的步道，有著優美的自然景觀，適合家庭出遊。",
+    popIcons: 1,
+    height: 400
+  },
+  {
+    name: "四季山步道",
+    imgUrl: "./02-web-images0102/explore-image/12_an_vision-tg6bXxR_XWE-unsplash.jpg",
+    location: "宜蘭縣",
+    duration: "6小時",
+    description: "四季山步道四季皆可享受，春夏秋冬皆有不同風景。",
+    popIcons: 3,
+    height: 1500
+  },
+  {
+    name: "雙溪步道",
+    imgUrl: "./02-web-images0102/explore-image/11_jeff-ma-9x6PQOcPvYk-unsplash.jpg",
+    location: "新北市",
+    duration: "2小時",
+    description: "雙溪步道沿著溪流而行，景色宜人，適合放鬆心情。",
+    popIcons: 1,
+    height: 300
+  },
+  {
+    name: "富貴角步道",
+    imgUrl: "./02-web-images0102/explore-image/24_yehyunxiang-PBpInGcIYXo-unsplash.jpg",
+    location: "新北市",
+    duration: "3.5小時",
+    description: "富貴角步道是觀賞北海岸壯麗景觀的好地方，尤其在日落時分。",
+    popIcons: 2,
+    height: 600
+  },
+  {
+    name: "東部海岸步道",
+    imgUrl: "./02-web-images0102/explore-image/25_angela-lo-VJcsDjJuPcc-unsplash.jpg",
+    location: "花蓮縣",
+    duration: "5小時",
+    description: "東部海岸步道提供壯麗的海景，適合喜愛自然和海邊的登山者。",
+    popIcons: 3,
+    height: 1000
+  }
 ];
 
 const PopIcon = () => (
@@ -241,7 +241,7 @@ const filterTrailsByHeight = (trails, selectedHeight) => {
     if (selectedHeight === "over1501M") {
       return trail.height > 1501; // Return trails with height greater than 1501M
     }
-  
+
     const heightLimit = parseInt(selectedHeight);
     return trail.height < heightLimit;
   });
@@ -256,18 +256,22 @@ export default function ExpBox() {
   return (
     <>
       {/* Select dropdown for height filter */}
-      <label htmlFor="selectH">請選擇高度</label>
-      <select
-        value={selectedHeight}
-        onChange={(e) => setSelectedHeight(e.target.value)}
-      id='selectH'>
-        <option value="">All</option>
-        <option value="500">500公尺以下</option>
-        <option value="1000">1000公尺以下</option>
-        <option value="1500">1500公尺以下</option>
-        <option value="over1501M">1501公尺以上</option>
-
-      </select>
+      <div className="filterbox">
+        {/* <figure>
+          <img src="./02-web-images0102/exPbanner_neom-UUPsAkA6jQA-unsplash.jpg" alt="" />
+        </figure> */}
+        <div className='alignC'>
+          <label htmlFor="selectH">請選擇高度</label>
+          <select
+            value={selectedHeight}
+            onChange={(e) => setSelectedHeight(e.target.value)}
+            id='selectH'>
+            <option value="">All</option>
+            <option value="500">500公尺以下</option>
+            <option value="1000">1000公尺以下</option>
+            <option value="1500">1500公尺以下</option>
+            <option value="over1501M">1501公尺以上</option>
+          </select></div></div>
 
       {/* Display filtered trails in the list */}
       <ul className="exPwrapper alignC">
@@ -276,17 +280,17 @@ export default function ExpBox() {
             <Link>
               <img alt={trail.name} src={trail.imgUrl} />
               <h3>{trail.name}</h3>
+              <div>
+                <h4 className='loC'>{trail.location}</h4>
+                <div><h4>全程<span>{trail.duration}</span></h4>
+                  <h4>流量<span>
+                    {Array.from({ length: trail.popIcons }).map((_, iconIndex) => (
+                      <PopIcon key={iconIndex} />
+                    ))}
+                  </span></h4></div>
+                <p>{trail.description}</p>
+              </div>
             </Link>
-            <div>
-              <h4>{trail.location}</h4>
-              <h4>全程<span>{trail.duration}</span></h4>
-              <h4>熱門程度<span>
-                {Array.from({ length: trail.popIcons }).map((_, iconIndex) => (
-                  <PopIcon key={iconIndex} />
-                ))}
-              </span></h4>
-              <p>{trail.description}</p>
-            </div>
           </li>
         ))}
         <button className="upD-btn">我要提供</button>

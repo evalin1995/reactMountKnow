@@ -87,24 +87,20 @@ a {
   justify-content: center;
 }
 .justFC h3 {
-  font-size: var(--font-size-l) !important;
+  font-size: 1.2rem;
 }
 
 body {
   font-family: "Sora", "Chocolate Classical Sans";
-  color: var(--text);
+  color: #3C3A36;
 }
 
 h1 {
   font-size: 3rem;
 }
 
-h3 {
-  font-size: var(--font-size-xl);
-}
-
 h4 {
-  font-size: var(--font-size-l);
+  font-size: 1.2rem;
 }
 
 p {
@@ -123,6 +119,27 @@ button {
 }
 
 /* 統一設定class結束*/
+/*字級定義*/
+h3 {
+  font-size: 24px;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h4,
+p {
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 640px) {
+  h3 {
+    font-size: 16px !important;
+  }
+}
+/*字級定義結束*/
 /* 首頁開始 */
 #index-banner {
   max-width: 196.02vh;
@@ -175,7 +192,7 @@ button {
   display: flex;
   color: #fff;
   padding: 0.2rem 16px;
-  font-size: var(--font-size-l);
+  font-size: 1.2rem;
   transition: none;
   align-self: flex-end;
   margin-right: 24px;
@@ -198,7 +215,7 @@ button {
   flex: 3;
   cursor: w-resize;
   overflow: hidden;
-  font-size: var(--font-size-l);
+  font-size: 1.2rem;
   font-family: "LXGW WenKai TC", serif;
 }
 #index-banner #grid-l .content {
@@ -222,7 +239,7 @@ button {
   flex: 5;
 }
 #index-banner .grid-r #row1 .card:nth-child(2):hover {
-  background-color: var(--primary1);
+  background-color: #DD711F;
   /* 右上-右-下 */
 }
 #index-banner .grid-r #row1 .card:nth-child(2) > img {
@@ -236,7 +253,7 @@ button {
   top: -10%;
 }
 #index-banner .grid-r #row1 > .card:first-child:hover {
-  background-color: var(--primary3-b);
+  background-color: #B1C1C2;
   /* 右上-左 */
 }
 #index-banner .grid-r #row1 #col1 {
@@ -244,11 +261,11 @@ button {
   justify-content: space-around;
 }
 #index-banner .grid-r #row1 #col1.card:hover .content > * {
-  color: var(--text);
+  color: #3C3A36;
 }
 #index-banner .grid-r #row1 #col1.card:hover span {
-  color: var(--deep);
-  border: 2px solid var(--deep);
+  color: #686664;
+  border: 2px solid #686664;
 }
 #index-banner .grid-r #row1 #col2 {
   display: flex;
@@ -257,7 +274,7 @@ button {
 }
 #index-banner .grid-r #row1 #col2 .card:nth-child(odd) {
   flex: 5;
-  background-color: var(--neutral1);
+  background-color: #557C56;
   /* 右上-右-上 */
 }
 #index-banner .grid-r #row1 #col2 .card:nth-child(even) {
@@ -265,12 +282,12 @@ button {
 }
 #index-banner #row2 {
   flex: 2;
-  background-size: 30%;
+  background-size: 60%;
   font-family: "LXGW WenKai TC", serif;
   flex-direction: row;
   background-image: linear-gradient(rgba(111, 128, 129, 0.8) 0, rgba(111, 128, 129, 0.9) 99%), url(../public/02-web-images0102/banner-bottom.png);
   backdrop-filter: blur(5px);
-  background-color: var(--primary3-b);
+  background-color: #B1C1C2;
 }
 
 @media (max-width: 640px) {
@@ -329,13 +346,13 @@ button {
 }
 .logo h4 {
   font-weight: 600;
-  color: var(--primary1);
+  color: #DD711F;
   width: 1.5rem;
 }
 
 #topbar {
   justify-content: space-between;
-  background-color: var(--primary2);
+  background-color: #33372C;
   opacity: 0.8;
   z-index: 999;
   position: fixed;
@@ -355,7 +372,6 @@ button {
 #topbar .navigation ul {
   display: flex;
   width: 100%;
-  border: 2px solid gold;
 }
 #topbar .navigation ul li {
   display: flex;
@@ -379,7 +395,7 @@ button {
   }
 }
 footer {
-  background-color: var(--primary2);
+  background-color: #33372C;
   color: #fff;
   position: relative;
 }
@@ -392,36 +408,44 @@ footer a.logo h4 {
 }
 footer small:last-child {
   position: absolute;
-  font-size: var(--font-size-xs);
+  font-size: 0.8rem;
   width: 33%;
   bottom: 1%;
-  color: var(--neutral2);
+  color: #A9A9A9;
   opacity: 0.5;
 }
 footer div h4 {
-  font-size: var(--font-size-m);
+  font-size: 1rem;
 }
 
 /*頁尾曲結束*/
 /* 測驗頁開始 */
 .banner {
-  background-size: cover;
-  height: 43vh;
+  height: 37vh;
   align-items: flex-end;
-  padding-bottom: 80px;
+  padding-bottom: 4%;
 }
 .banner#quiz-banner {
   background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
   background-position: 50% 43%;
   z-index: 99;
-  height: 52vh;
+  background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+}
+.banner#exP-banner {
+  background-image: url(./public/02-web-images0102/explore-image/exPcard-bg_5481060_2851714-01.svg);
+  background-size: 50%;
+}
+.banner#NuT-banner {
+  background-image: url(../public/02-web-images0102/nutrition/nutrition-bg.png), linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  background-size: 50%;
+  background-position: 50% 70%;
 }
 .banner .heading {
-  background-color: var(--primary2);
-  color: var(--neutral3);
+  background-color: #33372C;
+  color: #D6E4E5;
 }
 .banner .heading span {
-  color: var(--primary1);
+  color: #DD711F;
   transition: 0.6s ease;
 }
 .banner:hover span {
@@ -431,52 +455,127 @@ footer div h4 {
 .wrapper {
   position: relative;
   flex-direction: column;
-  padding: 0 2%;
+  padding: 0 1%;
   background-image: linear-gradient(rgba(169, 169, 169, 0.7) 1%, rgba(169, 169, 169, 0.7) 99%), url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
 }
 .wrapper #quiz {
   display: flex;
   flex-direction: column;
   padding-bottom: 5%;
+  width: 100%;
+  flex-flow: row wrap;
+  align-items: stretch;
 }
 .wrapper #quiz > p {
   padding-top: 5%;
+  align-self: center;
+  padding: 5% 38% 0;
 }
 .wrapper #quiz .quiz-box {
-  background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
-  background-size: cover;
-  margin: 24px 0 6%;
-  padding: 0 16px;
-  transition: 0.5s ease-in;
-  z-index: 99;
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+  font-size: large;
 }
-.wrapper #quiz .quiz-box:nth-child(even) {
-  background-position: 50% 20%;
+.wrapper #quiz .quiz-box:nth-child(4) {
+  width: 100%;
 }
 .wrapper #quiz .quiz-box div.question {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: 50%;
+  padding-top: 4%;
+  border: 5px #686664;
+  border-style: dotted;
+  padding: 3% 5%;
+}
+.wrapper #quiz .quiz-box div.question strong,
+.wrapper #quiz .quiz-box div.question h4 {
+  transform: scale(1.1);
+}
+.wrapper #quiz .quiz-box div.question ul {
+  display: flex;
+  flex-direction: column;
 }
 .wrapper #quiz .quiz-box div.question ul li {
-  white-space: nowrap;
-  margin: 0 10px;
+  padding: 1% 8px;
 }
-.wrapper #quiz button {
-  background-color: var(--primary2);
+.wrapper #quiz .quiz-box div.question ul li * {
+  font-size: large;
+}
+.wrapper #quiz .quiz-box div.question ul li input[type=radio] {
+  appearance: none;
+  /* 移除預設的單選框樣式 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 1rem;
+  /* 單選框的寬度 */
+  height: 1rem;
+  /* 單選框的高度 */
+  border: 2px solid #686664;
+  /* 灰色邊框 */
+  border-radius: 4px;
+  /* 長方形的邊角（非圓形） */
+  background-color: white;
+  /* 背景顏色為白色 */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  /* 當選擇時，背景顏色與邊框顏色平滑過渡 */
+}
+.wrapper #quiz .quiz-box div.question ul li input[type=radio]:checked {
+  background-color: #C62E2E;
+  /* 當選擇時背景顏色變為綠色 */
+}
+.wrapper #quiz .quiz-box div.question ul li input[type=radio]:checked:after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  /* 圓形的位置 */
+  left: 25%;
+  /* 圓形的位置 */
+  width: 50%;
+  /* 圓形的寬度 */
+  height: 50%;
+  /* 圓形的高度 */
+  border-radius: 50%;
+  /* 使內部元素成為圓形 */
+  background-color: white;
+  /* 圓形的顏色為白色 */
+}
+.wrapper #quiz .quiz-box div.question ul li label {
+  margin-left: 8px;
+  /* 左邊距離，讓文字不會與單選框重疊 */
+  cursor: pointer;
+  /* 滑鼠懸停時顯示為指標手形 */
+  /* 防止用戶選擇文字 */
+}
+.wrapper #quiz > div {
+  width: 100%;
+  padding-top: 2%;
+}
+.wrapper #quiz > div button {
+  background-color: #33372C;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   margin-left: 6%;
   white-space: nowrap;
+  align-self: flex-end;
+}
+.wrapper #quiz > div button:nth-child(odd) {
+  background-color: #DD711F;
+}
+.wrapper button {
+  font-size: larger;
 }
 .wrapper svg.quiz-bg {
   position: absolute;
   /* 利用wrapper的外層定位 */
   width: 30%;
-  color: #fff;
+  width: 15%;
+  color: rgba(189, 111, 56, 0.5);
   /* 定義svg檔色彩 */
-  z-index: -1;
+  z-index: 1;
 }
 .wrapper svg.quiz-bg:nth-child(odd) {
   top: 3%;
@@ -487,6 +586,279 @@ footer div h4 {
   right: 3%;
 }
 .wrapper svg.quiz-bg:nth-child(3) {
-  top: 58%;
-  right: 19%;
+  top: 58% !important;
+  right: 19% !important;
+}
+
+@media (max-width: 640px) {
+  .wrapper #quiz p {
+    padding: 2% 11% !important;
+  }
+  .wrapper #quiz .quiz-box {
+    width: 100% !important;
+  }
+  .wrapper .quiz-bg {
+    width: 33% !important;
+  }
+  .wrapper .quiz-bg:last-child {
+    bottom: 3% !important;
+  }
+}
+/*探索頁開始*/
+#explore {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  padding-top: 32px;
+  padding: 0 48px 3%;
+  position: relative;
+  background-image: linear-gradient(to left bottom, #d7d2cc 0, #a5a29f 20%, #304352 91%);
+}
+#explore .exP-dec {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  z-index: 999;
+  width: 16%;
+}
+#explore .exP-dec:nth-child(3) {
+  left: 0;
+  width: 17%;
+}
+#explore .exP-dec:nth-child(even) {
+  right: 24%;
+}
+#explore .exP-dec:nth-child(1) {
+  right: 15%;
+}
+#explore .exPwrapper {
+  flex: 5;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 2% 2% 0 0;
+}
+#explore .exPwrapper .exPcard {
+  width: 29%;
+  /*正常螢幕一列三張*/
+  margin: 0 auto;
+  aspect-ratio: 2/3;
+  /* 寬度-高比例*/
+  max-height: 43vh;
+  margin-top: 2%;
+  position: relative;
+  overflow: hidden;
+}
+#explore .exPwrapper .exPcard::after {
+  content: "New 2025.1";
+  position: absolute;
+  right: 0;
+  top: 11%;
+  display: block;
+  transform: rotate(90deg);
+  right: -8%;
+  font-size: 16px;
+  font-size: 0.8rem;
+  z-index: 99;
+  color: #D6E4E5;
+}
+#explore .exPwrapper .exPcard a {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+#explore .exPwrapper .exPcard a > *:not(img) {
+  z-index: 99;
+}
+#explore .exPwrapper .exPcard a h3 {
+  padding: 0 1%;
+  padding-left: 5%;
+  background-image: url(./public/02-web-images0102/explore-image/expTitle-bg.png);
+  background-size: contain;
+  background-size: 110%;
+  align-self: flex-start;
+  /*寬度hug*/
+  background-repeat: no-repeat;
+}
+#explore .exPwrapper .exPcard a img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  transition: 0.4s ease;
+}
+#explore .exPwrapper .exPcard a div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4% 5% 1%;
+}
+#explore .exPwrapper .exPcard a div h4.loC {
+  background-color: #005c55;
+  color: #fff;
+  padding: 1% 6%;
+  border: #33372C;
+  border-style: groove;
+}
+#explore .exPwrapper .exPcard a div div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#explore .exPwrapper .exPcard a div div h4 {
+  display: flex;
+}
+#explore .exPwrapper .exPcard a div div h4 span {
+  display: flex;
+  padding-left: 16px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+#explore .exPwrapper .exPcard a div div h4:last-child span {
+  margin-bottom: 7%;
+}
+#explore .exPwrapper .exPcard a div div h4:last-child svg {
+  width: auto;
+  margin-right: 0.2rem;
+  height: 1rem;
+  color: #DD711F;
+}
+#explore .exPwrapper .exPcard a p {
+  opacity: 0;
+  font-size: 0.8rem;
+  margin-top: -1rem;
+  transition: 0.4s ease;
+  background-color: rgba(51, 55, 44, 0.5);
+}
+#explore .exPwrapper .exPcard a:hover > img {
+  transform: scale(1.1);
+}
+#explore .exPwrapper .exPcard a:hover p {
+  opacity: 1;
+  margin-top: 0;
+}
+#explore .filterbox {
+  display: flex;
+  flex: 2;
+  align-items: start;
+  height: 120vh;
+  color: #fff;
+  padding-top: 48px;
+  background-image: url(./public/02-web-images0102/exPbanner_neom-UUPsAkA6jQA-unsplash.jpg);
+  background-position: 64%;
+  background-size: cover;
+}
+#explore .filterbox > div {
+  background-color: #33372C;
+  padding: 3% 5%;
+  align-self: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+#explore .filterbox > *:not(figure) {
+  padding: 2% 6%;
+  font-size: 1.2rem;
+}
+
+#exP-end {
+  background-image: linear-gradient(to left top, #d7d2cc 0, #a5a29f 30%, #304352 91%);
+  flex-direction: column;
+}
+#exP-end > h3 {
+  align-self: flex-start;
+  padding-left: 5%;
+}
+#exP-end > div {
+  width: 80%;
+  align-items: normal;
+  padding: 0 0 3%;
+}
+#exP-end > div .trail-info {
+  display: flex;
+  margin-left: 6%;
+  color: #ecf3f2;
+  padding: 0 1%;
+}
+#exP-end > div .trail-info h3 {
+  flex: 3;
+}
+#exP-end > div .trail-info p {
+  flex: 5;
+}
+
+@media (max-width: 640px) {
+  #explore .exPwrapper .exPcard {
+    width: 45% !important;
+  }
+  #explore .exPwrapper .exPcard div > div {
+    display: none !important;
+  }
+  #explore .filterbox {
+    width: 100%;
+  }
+}
+#exP-end > div {
+  flex-direction: column;
+}
+
+@media (max-width: 1023px) {
+  #explore {
+    flex-direction: column;
+  }
+}
+/*探索頁結束*/
+/*營養頁開始*/
+#nuT-wrap {
+  padding-bottom: 5%;
+  flex-flow: row wrap;
+  align-items: normal;
+  padding: 0 7%;
+}
+#nuT-wrap > li {
+  border: 2px #686664;
+  border-style: dashed double;
+  padding: 1% 16px;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  /*蔬菜卡左欄*/
+}
+#nuT-wrap > li ul {
+  flex-direction: column;
+}
+#nuT-wrap > li ul li:not(.alignC) {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+#nuT-wrap > li ul li.alignC {
+  width: 77%;
+  flex-direction: column-reverse;
+}
+#nuT-wrap > li ul li figure {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 4px;
+  max-width: 200px;
+}
+#nuT-wrap > li ul li figure img {
+  height: 100%;
+  object-fit: cover;
+}
+#nuT-wrap > li ul li h4 {
+  font-family: "LXGW WenKai TC", serif;
+  white-space: nowrap;
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
+}
+#nuT-wrap > li ul li span {
+  height: 0.7rem;
+  background-color: #557C56;
+}
+#nuT-wrap > li ul li:last-child span {
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */

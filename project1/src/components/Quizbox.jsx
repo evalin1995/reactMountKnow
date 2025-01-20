@@ -52,15 +52,15 @@ const questions = [
     answer: 1
   }
 ];
- // Split the questions into 3 parts
- const chunkSize = 4;
- const chunks = [];
- for (let i = 0; i < questions.length; i += chunkSize) {
-   chunks.push(questions.slice(i, i + chunkSize));
- }
+// Split the questions into 3 parts
+const chunkSize = 4;
+const chunks = [];
+for (let i = 0; i < questions.length; i += chunkSize) {
+  chunks.push(questions.slice(i, i + chunkSize));
+}
 export default function Quizbox() {
 
- 
+
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
   const [score, setScore] = useState(null);
 
@@ -81,8 +81,8 @@ export default function Quizbox() {
   };
   return (
     <>
-     <ul id='quiz' className="alignC">
-      <p>即便是沒有高低起伏的近郊步道，風險也無所不在。利用10題測驗，了解學習登山知識的方向。（花費時間：10分鐘）</p>
+      <ul id='quiz' className="alignC">
+        <p>即便是沒有高低起伏的近郊步道，風險也無所不在。利用10題測驗，了解學習登山知識的方向。（花費時間：10分鐘）</p>
         {chunks.map((chunk, index) => (
           <li key={index} className="quiz-box">
             {chunk.map((question, questionIndex) => (
@@ -91,16 +91,16 @@ export default function Quizbox() {
                 <h4>{question.question}</h4>
 
                 <ul style={{
-                  display:'flex',
-                  
+                  display: 'flex',
+
                 }}>
-                                {/* 顯示每個問題的選項 */}
-                  
+                  {/* 顯示每個問題的選項 */}
+
                   {question.options.map((option, i) => (
                     <li key={i}>
-                                            {/* 單選框，當選擇答案時觸發 handleChange */}
+                      {/* 單選框，當選擇答案時觸發 handleChange */}
 
-                  <input
+                      <input
                         type="radio"
                         id={`question${index * chunkSize + questionIndex}-option${i}`}
                         name={`question${index * chunkSize + questionIndex}`} // Use a unique name for each question
@@ -118,19 +118,20 @@ export default function Quizbox() {
             ))}
           </li>
         ))}
-      
-      {score !== null && (
-        <div className="score">
-          <p>你的分數是：{score} / {questions.length}</p>
-        </div>
-      )}
-<div className="center" style={{}}>
-<button  onClick={handleSubmit}>看結果</button>
-      <button  onClick={handleClear}>再試一次</button>
 
-</div>
-</ul>
-</>
+        
+        <div className="center" style={{}}>
+        {score !== null && (
+          <div className="score">
+            <p>你的分數是：{score} / {questions.length}</p>
+          </div>
+        )}
+          <button onClick={handleSubmit}>看結果</button>
+          <button onClick={handleClear}>再試一次</button>
+
+        </div>
+      </ul>
+    </>
   )
 }
 

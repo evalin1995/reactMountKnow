@@ -72,82 +72,6 @@
   flex-wrap: wrap;
 }
 
-
-
-
-#quiz>div:last-child {
-  margin-top: 6%;
-}
-
-#quiz button:nth-child(even) {
-  background: orange;
-}
-
-/* 隱藏預設的單選框 */
-.question input[type="radio"] {
-  appearance: none;
-  /* 移除預設的單選框樣式 */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: relative;
-  width: 1rem;
-  /* 單選框的寬度 */
-  height: 1rem;
-  /* 單選框的高度 */
-  border: 2px solid var(--deep);
-  /* 灰色邊框 */
-  border-radius: 4px;
-  /* 長方形的邊角（非圓形） */
-  background-color: white;
-  /* 背景顏色為白色 */
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  /* 當選擇時，背景顏色與邊框顏色平滑過渡 */
-}
-
-/* 當選擇單選框時的樣式 */
-.question input[type="radio"]:checked {
-  background-color: var(--red);
-  /* 當選擇時背景顏色變為綠色 */
-}
-
-/* 當單選框被選中時，顯示一個圓形標示 */
-.question input[type="radio"]:checked::after {
-  content: "";
-  position: absolute;
-  top: 25%;
-  /* 圓形的位置 */
-  left: 25%;
-  /* 圓形的位置 */
-  width: 50%;
-  /* 圓形的寬度 */
-  height: 50%;
-  /* 圓形的高度 */
-  border-radius: 50%;
-  /* 使內部元素成為圓形 */
-  background-color: white;
-  /* 圓形的顏色為白色 */
-}
-
-/* 標籤文字的樣式 */
-.question label {
-  font-size: 1rem;
-  /* 字體大小 */
-  margin-left: 0.1rem;
-  /* 左邊距離，讓文字不會與單選框重疊 */
-  cursor: pointer;
-  /* 滑鼠懸停時顯示為指標手形 */
-  user-select: none;
-  /* 防止用戶選擇文字 */
-}
-
-/* 設定問題選項列表的樣式 */
-.question ul li {
-  margin: 8px;
-  /* 每個選項的上下邊距 */
-  display: flex;
-  align-items: flex-end;
-}
-
 .question ul {
   padding: 0 8px 8px;
 }
@@ -187,29 +111,21 @@
 }
 
 #nuT-wrap {
-  background-image: url(../public/02-web-images0102/nutrition/nutrition-bg.png);
   background-color: var(--primary3);
   background-size: 26%;
   padding: 5% 3% 0;
   min-height: 100vh;
-  padding-bottom: 5%;
-  flex-flow: row wrap;
 }
 
 #nuT-wrap>li {
   width: 70%;
-  margin: 3% 1% 0;
   background-color: rgba(255, 255, 255, .8);
-  border: 5px var(--deep);
-  border-style: dashed double;
   border-radius: 16px;
-  padding: 1% 16px;
   transition: .5s ease-out;
   backdrop-filter: blur(3px);
 }
 
 #nuT-wrap li>ul {
-  flex-direction: column;
   flex: 3;
 }
 
@@ -219,67 +135,6 @@
 
 }
 
-#nuT-wrap li ul li:not(.alignC) {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  align-items: flex-end;
-}
-
-#nuT-wrap li>.content {
-  flex: 5;
-}
-
-#nuT-wrap li>figure {
-  aspect-ratio: 1 / 1;
-  width: 43%;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 4px;
-}
-
-#nuT-wrap>li img {
-  height: 100%;
-  object-fit: cover;
-}
-
-
-#nuT-wrap>li:nth-child(odd) {
-  transform: translate(0, -6%);
-  ;
-}
-
-#nuT-wrap>li:hover {
-  transform: none;
-}
-
-#nuT-wrap>li:hover figure>img {
-  transform: scale(1.2);
-}
-
-#nuT-wrap li>ul>li h4 {
-  font-family: "LXGW WenKai TC", serif;
-  white-space: nowrap;
-  padding-right: 0.5rem;
-  font-size: var(--font-size-xs);
-}
-
-#nuT-wrap li>ul>li span {
-  height: 0.7rem;
-  background-color: var(--neutral1);
-}
-
-#nuT-wrap li>ul>li:nth-child(even) span:last-child {
-  width: 50px !important;
-}
-
-#nuT-wrap li>ul>li span:last-child {
-  width: 80px;
-}
-
-#nuT-wrap .content {
-  color: var(--text);
-  flex: 5;
-}
 
 /* General Styles */
 
