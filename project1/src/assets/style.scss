@@ -297,7 +297,7 @@ p {
     background-image:
       linear-gradient(rgba(111, 128, 129, 0.8) 0,
         rgba(111, 128, 129, 0.9) 99%),
-      url(../public/02-web-images0102/banner-bottom.png);
+      url(..//public/02-web-images0102/banner-bottom.png);
     backdrop-filter: blur(5px);
     background-color: $primary3-b;
   }
@@ -499,10 +499,10 @@ footer {
   padding-bottom: 4%;
 
   &#quiz-banner {
-    background-image: url(../public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
+    background-image: url(..//public/02-web-images0102/quiz-banner_pietro-de-grandi-Q5dMq3cKqec-unsplash.jpg);
     background-position: 50% 43%;
     z-index: 99;
-    background-image: url(../public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
+    background-image: url(..//public/02-web-images0102/heather-green-hKfKmfvPY44-unsplash.jpg);
 
   }
 
@@ -512,7 +512,7 @@ footer {
   }
 
   &#NuT-banner {
-    background-image: url(../public/02-web-images0102/nutrition/nutrition-bg.png),
+    background-image: url(..//public/02-web-images0102/nutrition/nutrition-bg.png),
       linear-gradient(to top, #feada6 0%, #f5efef 100%);
     background-size: 50%;
     background-position: 50% 70%;
@@ -541,7 +541,7 @@ footer {
   padding: 0 1%;
   background-image: linear-gradient(rgba(169, 169, 169, .7) 1%,
       rgba(169, 169, 169, .7) 99%),
-    url(../public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
+    url(..//public/02-web-images0102/quiz-bg_vino-li-55nuS2rUYmQ-unsplash.png);
 
   #quiz {
     display: flex;
